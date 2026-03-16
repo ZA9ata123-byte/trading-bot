@@ -1,5 +1,4 @@
-import requests
-from config import CRYPTOPANIC_KEY
+import feedparser
 import logging
 
 log = logging.getLogger(__name__)
@@ -7,26 +6,28 @@ log = logging.getLogger(__name__)
 BAD_KEYWORDS = [
     "hack", "breach", "ban", "lawsuit",
     "crash", "scam", "fraud", "bankrupt",
-    "regulation", "sec", "shutdown"
+    "regulation", "sec", "shutdown", "delisting"
+]
+
+FEEDS = [
+    "https://cointelegraph.com/rss",
+    "https://www.coindesk.com/arc/outboundfeeds/rss/"
 ]
 
 def check_news(symbol):
-    if not CRYPTOPANIC_KEY:
-        return True  # لو ما عندكش API = اسمح دائماً
-
     try:
-        coin = symbol.replace("/USDT", "")
-        url  = f"https://cryptopanic.com/api/v1/posts/?auth_token={CRYPTOPANIC_KEY}&currencies={coin}&filter=important"
-        r    = requests.get(url, timeout=5)
-        data = r.json()
+        coin = symbol.replace("/USDT", "").lower()
+        
+        for url in FEEDS:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:15]:
+                title = entry.title.lower()
+                if coin in title:
+                    if any(kw in title for kw in BAD_KEYWORDS):
+                        log.warning(f"⚠️ خبر سلبي لـ {symbol}: {entry.title}")
+                        return False
+        return True
 
-        for post in data.get("results", [])[:5]:
-            title = post.get("title", "").lower()
-            if any(kw in title for kw in BAD_KEYWORDS):
-                log.warning(f"⚠️ خبر سلبي لـ {symbol}: {post['title']}")
-                return False  # لا تدخل الصفقة
-
-        return True  # أخبار نظيفة
-
-    except Exception:
-        return True  # في حال خطأ = اسمح
+    except Exception as e:
+        log.error(f"خطأ الأخبار: {e}")
+        return True

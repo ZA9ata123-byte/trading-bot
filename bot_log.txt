@@ -1,0 +1,370 @@
+2026-03-17 17:21:01,562 | INFO | 🚀 البوت شغال!
+2026-03-17 17:21:01,562 | INFO | 📝 Paper Trading
+2026-03-17 17:21:05,978 | INFO | ✅ 234 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 17:21:05,981 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:21:42,418 | WARNING | ⚠️ خبر سلبي لـ G/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:21:43,900 | WARNING | ⚠️ خبر سلبي لـ U/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:21:55,466 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:22:01,969 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:22:15,490 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:22:17,689 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:22:25,304 | WARNING | ⚠️ خبر سلبي لـ AR/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:22:49,253 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:22:59,169 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:23:27,185 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:25:04,922 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:25:42,164 | WARNING | ⚠️ خبر سلبي لـ G/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:25:43,777 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:25:55,277 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:26:01,922 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:26:15,156 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:26:17,216 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:26:25,188 | WARNING | ⚠️ خبر سلبي لـ AR/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:26:49,000 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:26:58,883 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:27:27,269 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: Cari picks ZKsync’s Prividium as US regional banks join stablecoin race
+2026-03-17 17:27:56,802 | INFO | 🚀 البوت شغال!
+2026-03-17 17:27:56,802 | INFO | 📝 Paper Trading
+2026-03-17 17:28:02,354 | INFO | ✅ 234 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 17:28:02,360 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:28:13,111 | INFO | 🚀 البوت شغال!
+2026-03-17 17:28:13,111 | INFO | 📝 Paper Trading
+2026-03-17 17:28:18,467 | INFO | ✅ 234 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 17:28:18,469 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:28:38,675 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:28:43,104 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:28:52,373 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:28:56,084 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:28:58,974 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:00,120 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:06,019 | INFO | 
+🔍 مسح #3 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:29:09,151 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:29:13,918 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:15,158 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:29:15,821 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:30,295 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:31,244 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:29:42,242 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:43,914 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:29:47,119 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:29:56,410 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:29:56,635 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:30:01,878 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:30:04,035 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:30:12,164 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:30:17,810 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:30:19,957 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:30:26,182 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:30:41,307 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:30:53,155 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:31:03,717 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:31:31,513 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:32:04,663 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:32:19,090 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:32:40,480 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:32:45,509 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:32:55,169 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:32:56,408 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:33:11,702 | INFO | 
+🔍 مسح #4 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:34:06,663 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:34:08,391 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:34:19,781 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:34:26,635 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:34:39,775 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:34:42,406 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:35:13,970 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:35:24,245 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:35:52,776 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:36:36,865 | INFO | 🚀 البوت شغال!
+2026-03-17 17:36:36,866 | INFO | 📝 Paper Trading
+2026-03-17 17:36:41,534 | INFO | ✅ 233 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 17:36:41,536 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:37:17,513 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:37:20,957 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:37:30,630 | INFO | 
+🔍 مسح #5 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:37:30,735 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:37:37,334 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:37:52,301 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:37:53,072 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:38:07,510 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:38:09,178 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:38:21,696 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:38:23,304 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:38:28,681 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:38:33,703 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:38:41,877 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:38:44,317 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:39:04,608 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:39:07,765 | INFO | ⛔ إيقاف البوت
+2026-03-17 17:39:15,455 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:39:25,480 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:39:54,159 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:41:31,939 | INFO | 
+🔍 مسح #6 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:42:08,197 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:42:10,006 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:42:20,783 | INFO | 🚀 البوت شغال!
+2026-03-17 17:42:20,783 | INFO | 📝 Paper Trading
+2026-03-17 17:42:21,434 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:42:24,588 | INFO | ✅ 233 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 17:42:24,590 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:42:28,905 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:42:42,284 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:42:44,419 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:43:02,441 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:43:05,811 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:43:14,937 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:43:16,682 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:43:21,479 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:43:26,385 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:43:35,585 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:43:37,295 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:43:55,523 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:44:07,857 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:44:17,322 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:44:48,726 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:45:32,953 | INFO | 
+🔍 مسح #7 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:46:10,061 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:46:11,894 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:46:21,284 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:46:23,626 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:46:30,968 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:46:43,772 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:46:46,027 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:46:58,699 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:47:02,223 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:47:11,929 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:47:18,064 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:47:18,815 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:47:27,684 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:47:33,499 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:47:35,047 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:47:55,667 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:48:06,061 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:48:16,340 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:48:48,916 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:49:34,842 | INFO | 
+🔍 مسح #8 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:50:12,412 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:50:14,141 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:50:22,124 | INFO | 
+🔍 مسح #3 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:50:25,786 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:50:32,818 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:50:46,057 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:50:48,206 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:50:58,995 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:51:02,412 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:51:11,901 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:51:18,699 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:51:19,110 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:51:29,509 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:51:33,248 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:51:34,632 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:51:58,179 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:52:06,018 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:52:15,911 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:52:48,834 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:53:36,663 | INFO | 
+🔍 مسح #9 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:54:13,074 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:54:15,018 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:54:19,991 | INFO | 
+🔍 مسح #4 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:54:26,433 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:54:33,126 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:54:46,119 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:54:48,257 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:54:56,429 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:55:00,330 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:55:10,886 | WARNING | ⚠️ خبر سلبي لـ F/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:55:17,515 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:55:20,919 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:55:30,402 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:55:31,561 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:55:33,083 | WARNING | ⚠️ خبر سلبي لـ S/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:55:58,135 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:56:03,079 | WARNING | ⚠️ خبر سلبي لـ OM/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:56:13,119 | WARNING | ⚠️ خبر سلبي لـ C/USDT: Five companies vie for Vietnam crypto licences as overseas ban looms: Report
+2026-03-17 17:56:45,593 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:57:35,300 | INFO | 
+🔍 مسح #10 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:58:13,023 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:14,715 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:17,521 | INFO | 
+🔍 مسح #5 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 17:58:33,531 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:46,023 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:48,556 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:54,242 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:58:57,537 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:59:14,518 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:59:28,875 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:59:30,538 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:59:30,753 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 17:59:58,860 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:00:14,386 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:00:48,599 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:01:41,280 | INFO | 
+🔍 مسح #11 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:02:16,844 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:02:18,510 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:02:20,818 | INFO | 
+🔍 مسح #6 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:02:37,484 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:05,424 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:08,731 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:26,711 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:40,499 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:40,834 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:42,436 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:04:43,264 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:05:25,172 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:05:26,745 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:05:54,712 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:05:58,322 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:07:30,240 | INFO | 
+🔍 مسح #7 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:07:32,715 | INFO | 
+🔍 مسح #12 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:08:07,948 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:09,014 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:10,748 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:11,439 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:28,078 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:30,198 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:43,223 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:43,884 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:45,523 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:08:45,642 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:09:26,177 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:09:28,312 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:09:56,544 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:09:58,959 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:11:31,262 | INFO | 
+🔍 مسح #8 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:11:33,900 | INFO | 
+🔍 مسح #13 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:12:08,477 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:12:09,784 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:12:11,441 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:12:11,904 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:12:28,314 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:13:39,266 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:13:52,399 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:13:55,217 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:14:01,649 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:14:03,325 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:14:38,832 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:14:45,433 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:15:07,175 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:15:19,619 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:16:45,141 | INFO | 
+🔍 مسح #14 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:16:51,123 | INFO | 
+🔍 مسح #9 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:17:20,552 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:22,604 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:28,386 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:31,726 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:41,109 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:47,840 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:53,836 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:17:56,126 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:18:02,566 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:18:04,434 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:18:38,360 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:18:45,906 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:19:06,161 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:19:19,757 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:20:43,452 | INFO | 
+🔍 مسح #15 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:20:51,074 | INFO | 
+🔍 مسح #10 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:21:19,734 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:21,397 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:28,304 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:31,598 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:40,286 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:47,443 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:53,155 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:21:55,569 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:22:02,686 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:22:04,598 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:25:00,503 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:25:34,725 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:27:07,114 | INFO | 
+🔍 مسح #11 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:27:42,716 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:27:45,971 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:28:02,168 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:28:16,223 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:28:18,231 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:28:58,828 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:29:32,178 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:31:03,843 | INFO | 
+🔍 مسح #12 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:31:39,566 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:31:43,004 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:31:59,463 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:32:14,225 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:32:15,915 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:32:57,358 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:34:38,362 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:36:11,120 | INFO | 
+🔍 مسح #13 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:36:47,878 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:36:51,098 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:37:07,155 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:37:21,336 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:37:23,010 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:38:03,595 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:38:36,245 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:40:08,307 | INFO | 
+🔍 مسح #14 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:40:44,248 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:40:48,070 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:41:04,379 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:41:18,859 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:41:20,604 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:42:02,231 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:42:31,777 | INFO | 🚀 البوت شغال!
+2026-03-17 18:42:31,777 | INFO | 📝 Paper Trading
+2026-03-17 18:42:35,079 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:42:36,789 | INFO | ✅ 235 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 18:42:36,791 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:44:06,633 | INFO | ⛔ إيقاف البوت
+2026-03-17 18:45:04,104 | INFO | 🚀 البوت شغال!
+2026-03-17 18:45:04,104 | INFO | 📝 Paper Trading
+2026-03-17 18:45:10,070 | INFO | ✅ 235 عملة | أفضل 5: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 18:45:10,074 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:45:45,785 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:45:47,794 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:46:05,843 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:46:20,123 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:46:22,622 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:47:04,497 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:47:38,665 | WARNING | ⚠️ خبر سلبي لـ IO/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:49:11,273 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 18:49:47,403 | WARNING | ⚠️ خبر سلبي لـ G/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:49:49,467 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:50:08,211 | WARNING | ⚠️ خبر سلبي لـ ZK/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:50:22,426 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:50:25,170 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 18:51:05,873 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins

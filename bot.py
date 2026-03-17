@@ -1,10 +1,19 @@
+"""
+=======================================================
+  🤖 RSI DIVERGENCE + EMA + LIQUIDITY TRADING BOT
+  المنصة: Binance (Spot)
+  العملات: أفضل 300 عملة — تحديث كل 10 دقائق
+  الفريم: 1 ساعة
+=======================================================
+"""
+
 import ccxt
 import pandas as pd
 import time
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from config import *
-from strategy import analyze
+from strategy import analyze, calculate_rsi, calculate_ema
 from news_filter import check_news
 
 logging.basicConfig(
@@ -17,7 +26,6 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ===================== الاتصال =====================
 def connect():
     return ccxt.binance({
         'apiKey': BINANCE_API_KEY,
@@ -26,14 +34,13 @@ def connect():
         'options': {'defaultType': 'spot'}
     })
 
-# ===================== جلب العملات =====================
 def get_top_symbols(exchange):
     try:
         tickers = exchange.fetch_tickers()
         data = [
             {"symbol": s, "volume": t.get('quoteVolume', 0)}
             for s, t in tickers.items()
-            if s.endswith(f"/{QUOTE_CURRENCY}")
+            if s.endswith("/USDT")
             and (t.get('quoteVolume') or 0) >= MIN_VOLUME_USD
         ]
         data.sort(key=lambda x: x['volume'], reverse=True)
@@ -44,7 +51,6 @@ def get_top_symbols(exchange):
         log.error(f"خطأ جلب العملات: {e}")
         return ["BTC/USDT", "ETH/USDT", "BNB/USDT", "SOL/USDT"]
 
-# ===================== جلب البيانات =====================
 def get_ohlcv(exchange, symbol):
     try:
         ohlcv = exchange.fetch_ohlcv(symbol, TIMEFRAME, limit=100)
@@ -54,7 +60,6 @@ def get_ohlcv(exchange, symbol):
     except Exception:
         return None
 
-# ===================== Trailing Stop =====================
 def update_trailing_stop(trade, current_price):
     entry  = trade['entry_price']
     signal = trade['signal']
@@ -66,48 +71,68 @@ def update_trailing_stop(trade, current_price):
                 new_stop = entry * (1 + new_stop_pct)
                 if new_stop > trade['stop_loss']:
                     trade['stop_loss'] = round(new_stop, 6)
-                    log.info(f"📈 Trailing Stop → ${trade['stop_loss']}")
+                    log.info(f"📈 Trailing Stop → ${trade['stop_loss']} | {trade['symbol']}")
             else:
                 new_stop = entry * (1 - new_stop_pct)
                 if new_stop < trade['stop_loss']:
                     trade['stop_loss'] = round(new_stop, 6)
-                    log.info(f"📉 Trailing Stop → ${trade['stop_loss']}")
+                    log.info(f"📉 Trailing Stop → ${trade['stop_loss']} | {trade['symbol']}")
 
-# ===================== تنفيذ الصفقة =====================
+def get_trade_amount(signal_data):
+    strength = signal_data.get('strength', 'NORMAL')
+    if strength == "VERY_STRONG":
+        amount = TRADE_AMOUNT * 2
+        log.info(f"💪 إشارة قوية جداً! → ${amount}")
+    elif strength == "STRONG":
+        amount = TRADE_AMOUNT * 1.5
+        log.info(f"✅ إشارة قوية → ${amount}")
+    else:
+        amount = TRADE_AMOUNT
+    max_amount = CAPITAL * 0.30
+    return min(amount, max_amount)
+
 def execute_trade(exchange, symbol, signal_data, open_trades):
     signal = signal_data['signal']
     price  = signal_data['price']
+    amount = get_trade_amount(signal_data)
 
     take_profit = price * (1 + 0.30) if signal == "BUY" else price * (1 - 0.30)
     stop_loss   = price * (1 - 0.10) if signal == "BUY" else price * (1 + 0.10)
 
     trade = {
-        "symbol":      symbol,
-        "signal":      signal,
-        "entry_price": price,
-        "take_profit": round(take_profit, 6),
-        "stop_loss":   round(stop_loss, 6),
-        "capital":     TRADE_AMOUNT,
-        "open_time":   datetime.now(),
-        "status":      "OPEN",
-        "profit":      0
+        "symbol":       symbol,
+        "signal":       signal,
+        "strength":     signal_data.get('strength', 'NORMAL'),
+        "entry_price":  price,
+        "take_profit":  round(take_profit, 6),
+        "stop_loss":    round(stop_loss, 6),
+        "capital":      amount,
+        "open_time":    datetime.now(),
+        "rsi":          signal_data['rsi'],
+        "volume_ratio": signal_data.get('volume_ratio', 0),
+        "pump":         signal_data.get('pump', False),
+        "status":       "OPEN",
+        "profit":       0
     }
 
     if PAPER_TRADING:
+        pump_icon = "🚀 PUMP!" if trade['pump'] else ""
         log.info(f"""
-╔══════════════════════════════════╗
-  📊 صفقة جديدة | Paper Trading
-  العملة:  {symbol}
-  {'🟢 شراء' if signal == 'BUY' else '🔴 بيع'}
-  RSI:     {signal_data['rsi']}
-  دخول:    ${price}
-  هدف:     ${trade['take_profit']}
-  حماية:   ${trade['stop_loss']}
-  رأسمال:  ${TRADE_AMOUNT}
-╚══════════════════════════════════╝""")
+╔══════════════════════════════════════════╗
+  📊 صفقة جديدة | Paper Trading {pump_icon}
+  العملة:       {symbol}
+  الاتجاه:     {'🟢 شراء' if signal == 'BUY' else '🔴 بيع'}
+  القوة:        {trade['strength']}
+  RSI:          {signal_data['rsi']}
+  Volume:       {signal_data.get('volume_ratio', 0)}x
+  سعر الدخول:   ${price}
+  هدف الربح:    ${trade['take_profit']} (+30%)
+  وقف الخسارة:  ${trade['stop_loss']} (-10%)
+  رأسمال:       ${amount}
+╚══════════════════════════════════════════╝""")
     else:
         try:
-            qty   = TRADE_AMOUNT / price
+            qty   = amount / price
             side  = 'buy' if signal == 'BUY' else 'sell'
             order = exchange.create_order(symbol, 'market', side, qty)
             trade['order_id'] = order['id']
@@ -119,7 +144,6 @@ def execute_trade(exchange, symbol, signal_data, open_trades):
     open_trades.append(trade)
     return trade
 
-# ===================== متابعة الصفقات =====================
 def monitor_trades(exchange, open_trades, closed_trades, daily_loss):
     for trade in open_trades[:]:
         if trade['status'] != 'OPEN':
@@ -130,64 +154,76 @@ def monitor_trades(exchange, open_trades, closed_trades, daily_loss):
             signal        = trade['signal']
             hours_open    = (datetime.now() - trade['open_time']).seconds / 3600
 
-            # تحديث Trailing Stop
             update_trailing_stop(trade, current_price)
 
-            hit_tp = (signal == 'BUY'  and current_price >= trade['take_profit']) or \
-                     (signal == 'SELL' and current_price <= trade['take_profit'])
-            hit_sl = (signal == 'BUY'  and current_price <= trade['stop_loss'])  or \
-                     (signal == 'SELL' and current_price >= trade['stop_loss'])
+            current_gain = (current_price - trade['entry_price']) / trade['entry_price']
+            if signal == 'SELL':
+                current_gain = -current_gain
+
+            hit_tp   = (signal == 'BUY'  and current_price >= trade['take_profit']) or \
+                       (signal == 'SELL' and current_price <= trade['take_profit'])
+            hit_sl   = (signal == 'BUY'  and current_price <= trade['stop_loss'])  or \
+                       (signal == 'SELL' and current_price >= trade['stop_loss'])
             hit_time = hours_open >= MAX_TRADE_HOURS
 
             reason = None
-            if hit_tp:   reason = "🎯 هدف الربح"
-            elif hit_sl: reason = "🛑 وقف الخسارة"
+            if hit_tp:     reason = "🎯 هدف الربح"
+            elif hit_sl:   reason = "🛑 وقف الخسارة"
             elif hit_time: reason = "⏰ 24 ساعة"
 
             if reason:
-                pnl = (current_price - trade['entry_price']) / trade['entry_price']
-                pnl = pnl if signal == 'BUY' else -pnl
-                profit = round(trade['capital'] * pnl, 2)
-
+                profit = round(trade['capital'] * current_gain, 2)
                 trade.update({
                     "status":     "CLOSED",
                     "exit_price": current_price,
                     "profit":     profit
                 })
-
                 if profit < 0:
                     daily_loss[0] += abs(profit)
 
-                log.info(f"{reason} | {trade['symbol']} | {'✅' if profit > 0 else '❌'} ${profit}")
+                icon = "✅" if profit > 0 else "❌"
+                log.info(f"""
+{reason} | {trade['symbol']}
+{icon} الربح/الخسارة: ${profit}
+دخول: ${trade['entry_price']} | خروج: ${current_price}
+مدة: {hours_open:.1f} ساعة | قوة: {trade['strength']}
+""")
                 closed_trades.append(trade)
                 open_trades.remove(trade)
 
         except Exception as e:
             log.error(f"خطأ متابعة {trade['symbol']}: {e}")
 
-# ===================== إحصائيات =====================
 def print_stats(open_trades, closed_trades, scan_count):
     if not closed_trades:
+        log.info("📊 لا توجد صفقات مغلقة بعد")
         return
+
     total  = sum(t['profit'] for t in closed_trades)
     wins   = len([t for t in closed_trades if t['profit'] > 0])
-    losses = len([t for t in closed_trades if t['profit'] <= 0])
+    losses = len(closed_trades) - wins
     wr     = wins / len(closed_trades) * 100
 
-    log.info(f"""
-╔══════════════════════════════════╗
-  📈 إحصائيات | مسح #{scan_count}
-  الصفقات:   {len(closed_trades)}
-  ✅ ربح:    {wins} | ❌ خسارة: {losses}
-  Win Rate:  {wr:.1f}%
-  💰 الصافي: ${total:.2f}
-  مفتوحة:    {len(open_trades)}
-╚══════════════════════════════════╝""")
+    best  = max(closed_trades, key=lambda x: x['profit'])
+    worst = min(closed_trades, key=lambda x: x['profit'])
 
-# ===================== الدالة الرئيسية =====================
+    log.info(f"""
+╔══════════════════════════════════════════╗
+  📈 إحصائيات | مسح #{scan_count}
+  الصفقات:    {len(closed_trades)}
+  ✅ رابحة:   {wins} | ❌ خاسرة: {losses}
+  Win Rate:   {wr:.1f}%
+  💰 الصافي:  ${total:.2f}
+  🏆 أفضل:   ${best['profit']:.2f} ({best['symbol']})
+  📉 أسوأ:    ${worst['profit']:.2f} ({worst['symbol']})
+  مفتوحة:     {len(open_trades)}
+╚══════════════════════════════════════════╝""")
+
 def run():
     log.info("🚀 البوت شغال!")
     log.info(f"{'📝 Paper Trading' if PAPER_TRADING else '💰 Live Trading'}")
+    log.info(f"⏱️  الفريم: {TIMEFRAME}")
+    log.info(f"🎯 مراقبة أفضل {TOP_SYMBOLS_COUNT} عملة | تحديث كل 10 دقائق")
 
     exchange      = connect()
     open_trades   = []
@@ -203,22 +239,23 @@ def run():
         try:
             scan_count += 1
 
-            # إعادة تعيين الخسارة اليومية
+            # إعادة تعيين يومية
             if datetime.now().date() != last_day:
                 daily_loss[0] = 0
                 last_day = datetime.now().date()
-                log.info("🔄 يوم جديد — إعادة تعيين الحدود")
+                log.info("🔄 يوم جديد!")
 
-            # تحديث العملات كل 6 ساعات
-            if time.time() - last_symbols_update > 21600:
-                symbols = get_top_symbols(exchange)
+            # ✅ تحديث العملات كل 10 دقائق
+            if time.time() - last_symbols_update > 600:
+                log.info("🔄 تحديث قائمة العملات...")
+                symbols             = get_top_symbols(exchange)
                 last_symbols_update = time.time()
 
             log.info(f"\n🔍 مسح #{scan_count} | مفتوحة: {len(open_trades)} | خسارة اليوم: ${daily_loss[0]:.2f}")
 
-            # التحقق من حد الخسارة اليومية
+            # حد الخسارة اليومية
             if daily_loss[0] >= DAILY_LOSS_LIMIT:
-                log.warning(f"🛑 وصلنا حد الخسارة اليومية ${DAILY_LOSS_LIMIT} — انتظار...")
+                log.warning(f"🛑 حد الخسارة اليومية ${DAILY_LOSS_LIMIT} — انتظار ساعة...")
                 time.sleep(3600)
                 continue
 
@@ -227,7 +264,8 @@ def run():
 
             # البحث عن إشارات
             if len(open_trades) < MAX_TRADES:
-                symbols_open = [t['symbol'] for t in open_trades]
+                symbols_open  = [t['symbol'] for t in open_trades]
+                signals_found = 0
 
                 for i, symbol in enumerate(symbols):
                     if symbol in symbols_open:
@@ -237,7 +275,6 @@ def run():
                     if i % 10 == 0 and i > 0:
                         time.sleep(1)
 
-                    # فلتر الأخبار
                     if not check_news(symbol):
                         continue
 
@@ -245,9 +282,15 @@ def run():
                     signal_data = analyze(df)
 
                     if signal_data:
-                        log.info(f"📡 {signal_data['signal']} | {symbol} | RSI: {signal_data['rsi']}")
+                        signals_found += 1
+                        pump_icon = "🚀" if signal_data.get('pump') else ""
+                        log.info(f"📡 {signal_data['signal']} {pump_icon} | {symbol} | RSI: {signal_data['rsi']} | قوة: {signal_data['strength']} | Volume: {signal_data.get('volume_ratio', 0)}x")
                         execute_trade(exchange, symbol, signal_data, open_trades)
 
+                if signals_found == 0:
+                    log.info("⏳ لا توجد إشارات الآن...")
+
+            # إحصائيات كل 10 مسحات
             if scan_count % 10 == 0:
                 print_stats(open_trades, closed_trades, scan_count)
 

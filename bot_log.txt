@@ -368,3 +368,11 @@
 2026-03-17 18:50:22,426 | WARNING | ⚠️ خبر سلبي لـ W/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
 2026-03-17 18:50:25,170 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
 2026-03-17 18:51:05,873 | WARNING | ⚠️ خبر سلبي لـ C/USDT: U.S. regional banks building tokenized deposit network on ZKsync to rival stablecoins
+2026-03-17 21:41:32,390 | INFO | 🚀 البوت شغال!
+2026-03-17 21:41:32,390 | INFO | 📝 Paper Trading
+2026-03-17 21:41:37,364 | INFO | ✅ 236 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 21:41:37,366 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 21:42:10,672 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 21:42:41,046 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 21:45:42,658 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities

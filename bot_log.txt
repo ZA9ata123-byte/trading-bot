@@ -376,3 +376,54 @@
 2026-03-17 21:42:10,672 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
 2026-03-17 21:42:41,046 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
 2026-03-17 21:45:42,658 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 22:15:36,506 | INFO | 🚀 البوت شغال!
+2026-03-17 22:15:36,506 | INFO | 📝 Paper Trading
+2026-03-17 22:15:36,507 | INFO | ⏱️  الفريم: 1h
+2026-03-17 22:15:36,507 | INFO | 🎯 مراقبة أفضل 300 عملة | تحديث كل 10 دقائق
+2026-03-17 22:15:41,952 | INFO | ✅ 238 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 22:15:41,954 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 22:16:16,079 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 22:16:45,923 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 22:21:26,062 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 22:35:18,990 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 22:54:03,412 | INFO | ⏳ لا توجد إشارات الآن...
+2026-03-17 22:55:03,413 | INFO | 🔄 تحديث قائمة العملات...
+2026-03-17 22:55:04,722 | INFO | ✅ 239 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 22:55:04,724 | INFO | 
+🔍 مسح #2 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 22:56:16,733 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 22:59:10,851 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 23:06:40,023 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 23:08:55,222 | WARNING | ⚠️ خبر سلبي لـ THE/USDT: Ironlight Group’s big $21 mln bet on tokenized securities: Worth the hype?
+2026-03-17 23:18:47,065 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 23:47:52,098 | INFO | ⏳ لا توجد إشارات الآن...
+2026-03-17 23:48:52,099 | INFO | 🔄 تحديث قائمة العملات...
+2026-03-17 23:48:52,917 | INFO | ✅ 240 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-17 23:48:52,920 | INFO | 
+🔍 مسح #3 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-17 23:50:12,496 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 23:50:41,616 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-17 23:54:12,295 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-17 23:57:57,182 | WARNING | ⚠️ خبر سلبي لـ THE/USDT: Ironlight Group’s big $21 mln bet on tokenized securities: Worth the hype?
+2026-03-18 00:11:31,259 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-18 00:38:43,182 | INFO | ⏳ لا توجد إشارات الآن...
+2026-03-18 00:39:43,185 | INFO | 🔄 يوم جديد!
+2026-03-18 00:39:43,186 | INFO | 🔄 تحديث قائمة العملات...
+2026-03-18 00:39:43,802 | INFO | ✅ 237 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-18 00:39:43,804 | INFO | 
+🔍 مسح #4 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-18 00:39:56,844 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-18 00:40:27,691 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-18 00:43:38,984 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-18 00:49:47,877 | WARNING | ⚠️ خبر سلبي لـ THE/USDT: Ironlight Group’s big $21 mln bet on tokenized securities: Worth the hype?
+2026-03-18 01:04:37,995 | WARNING | ⚠️ خبر سلبي لـ S/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-18 01:27:50,976 | INFO | ⏳ لا توجد إشارات الآن...
+2026-03-18 01:28:50,978 | INFO | 🔄 تحديث قائمة العملات...
+2026-03-18 01:28:52,508 | INFO | ✅ 237 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-18 01:28:52,510 | INFO | 
+🔍 مسح #5 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-18 01:29:06,684 | WARNING | ⚠️ خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-18 01:29:26,612 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-18 01:32:36,977 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
+2026-03-18 01:33:53,724 | WARNING | ⚠️ خبر سلبي لـ THE/USDT: Ironlight Group’s big $21 mln bet on tokenized securities: Worth the hype?

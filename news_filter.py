@@ -4,15 +4,15 @@ import logging
 
 log = logging.getLogger(__name__)
 
+# اخبار خطيرة فقط
 BAD_KEYWORDS = [
-    "hack", "breach", "ban", "lawsuit", "crash",
-    "scam", "fraud", "bankrupt", "regulation", 
-    "sec", "shutdown", "delisting", "exploit",
-    "rug pull", "ponzi", "arrest", "seized"
+    "hack", "breach", "exploit",
+    "scam", "rug pull", "fraud",
+    "bankrupt", "shutdown", "delisting",
+    "ponzi", "arrest", "seized", "crash"
 ]
 
 FEEDS = [
-    # المجلات الكبيرة
     "https://cointelegraph.com/rss",
     "https://coindesk.com/arc/outboundfeeds/rss/",
     "https://bitcoinmagazine.com/feed",
@@ -21,9 +21,7 @@ FEEDS = [
     "https://bitcoinist.com/feed/",
     "https://newsbtc.com/feed/",
     "https://ambcrypto.com/feed/",
-    # Investing
     "https://www.investing.com/rss/news_301.rss",
-    # Reddit
     "https://www.reddit.com/r/CryptoCurrency/new/.rss",
     "https://www.reddit.com/r/Bitcoin/new/.rss",
     "https://www.reddit.com/r/ethereum/new/.rss",
@@ -43,7 +41,7 @@ def check_news(symbol):
                     # نتحقق أن اسم العملة موجود كلمة كاملة
                     if re.search(r'\b' + re.escape(coin) + r'\b', title):
                         if any(kw in title for kw in BAD_KEYWORDS):
-                            log.warning(f"⚠️ خبر سلبي لـ {symbol}: {entry.title}")
+                            log.warning(f"خبر سلبي لـ {symbol}: {entry.title}")
                             return False
             except Exception:
                 continue
@@ -51,5 +49,5 @@ def check_news(symbol):
         return True
 
     except Exception as e:
-        log.error(f"خطأ الأخبار: {e}")
+        log.error(f"خطأ الاخبار: {e}")
         return True

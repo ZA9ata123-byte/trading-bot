@@ -427,3 +427,12 @@
 2026-03-18 01:29:26,612 | WARNING | ⚠️ خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
 2026-03-18 01:32:36,977 | WARNING | ⚠️ خبر سلبي لـ U/USDT: U.S. SEC issues first-ever definitions for what crypto assets are securities
 2026-03-18 01:33:53,724 | WARNING | ⚠️ خبر سلبي لـ THE/USDT: Ironlight Group’s big $21 mln bet on tokenized securities: Worth the hype?
+2026-03-18 01:42:14,918 | INFO | 🚀 البوت شغال!
+2026-03-18 01:42:14,918 | INFO | 📝 Paper Trading
+2026-03-18 01:42:14,918 | INFO | ⏱️  الفريم: 1h
+2026-03-18 01:42:14,918 | INFO | 🎯 مراقبة أفضل 300 عملة | تحديث كل 10 دقائق
+2026-03-18 01:42:19,022 | INFO | ✅ 238 عملة | أفضل 5: ['BTC/USDT', 'USDC/USDT', 'ETH/USDT', 'XRP/USDT', 'SOL/USDT']
+2026-03-18 01:42:19,024 | INFO | 
+🔍 مسح #1 | مفتوحة: 0 | خسارة اليوم: $0.00
+2026-03-18 01:43:25,888 | WARNING | خبر سلبي لـ XRP/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels
+2026-03-18 01:44:11,091 | WARNING | خبر سلبي لـ BNB/USDT: XRP Price Flips BNB as Open Interest Rebuilds Toward Pre-Crash Levels

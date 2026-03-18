@@ -10,28 +10,28 @@ CRYPTOPANIC_KEY    = os.getenv("CRYPTOPANIC_API_KEY")
 # وضع التداول
 PAPER_TRADING = os.getenv("PAPER_TRADING", "True") == "True"
 
-# إعدادات رأس المال
+# اعدادات رأس المال
 CAPITAL          = float(os.getenv("CAPITAL", 200))
 TRADE_AMOUNT     = float(os.getenv("TRADE_AMOUNT", 20))
 MAX_TRADES       = int(os.getenv("MAX_TRADES", 10))
 DAILY_LOSS_LIMIT = float(os.getenv("DAILY_LOSS_LIMIT", 20))
 
-# إعدادات RSI
-RSI_PERIOD    = 14
-RSI_FAST      = 6
-RSI_OVERSOLD  = 30
+# اعدادات RSI
+RSI_PERIOD     = 14
+RSI_FAST       = 6
+RSI_OVERSOLD   = 30
 RSI_OVERBOUGHT = 70
 
-# إعدادات EMA
-EMA_FAST = 9
-EMA_SLOW = 21
+# اعدادات EMA
+EMA_FAST  = 9
+EMA_SLOW  = 21
 EMA_TREND = 200
 
-# إعدادات التداول
+# اعدادات التداول
 TIMEFRAME         = "1h"
-TOP_SYMBOLS_COUNT = 300
+TOP_SYMBOLS_COUNT = 1000      # كل العملات
 QUOTE_CURRENCY    = "USDT"
-MIN_VOLUME_USD    = 1_000_000
+MIN_VOLUME_USD    = 100_000   # حد ادنى منخفض
 SLEEP_TIME        = 60
 VOLUME_INCREASE   = 1.20
 

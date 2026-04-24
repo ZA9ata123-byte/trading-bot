@@ -102,6 +102,29 @@ def check_cooldown(symbol):
         pass
     return False
 
+def check_trap_memory(candidate, rsi_1m):
+    """التعلم من الماضي: هل هذا السلوك سام؟"""
+    try:
+        mem = load_json(MEMORY_FILE, {'trades': []})
+        symbol = candidate['symbol']
+        past_trades = [t for t in mem.get('trades', []) if t.get('symbol') == symbol]
+        if not past_trades:
+            return False
+            
+        recent_3 = past_trades[-3:]
+        if len(recent_3) == 3 and all(not t.get('won') for t in recent_3):
+            return True # السلوك الحالي للعملة سام جداً
+            
+        similar_losses = [t for t in past_trades if not t.get('won') and abs(t.get('rsi_1m', 0) - rsi_1m) < 5]
+        similar_wins = [t for t in past_trades if t.get('won') and abs(t.get('rsi_1m', 0) - rsi_1m) < 5]
+        
+        if len(similar_losses) >= 3 and len(similar_wins) == 0:
+            return True # فخ تاريخي مثبت
+            
+    except Exception as e:
+        log.error(f"Memory check error: {e}")
+    return False
+
 
 def validate_entry(exchange, candidate):
     """تحقق من الدخول على 1m timeframe"""
@@ -122,16 +145,35 @@ def validate_entry(exchange, candidate):
         last_3 = df.iloc[-3:]
         green_count = sum(1 for _, c in last_3.iterrows() if c['c'] > c['o'])
         
+        # فلترة ذيول الرفض (Rejection Wicks)
+        last_candle = df.iloc[-1]
+        body_size = abs(last_candle['c'] - last_candle['o'])
+        upper_wick = last_candle['h'] - max(last_candle['o'], last_candle['c'])
+        has_toxic_wick = upper_wick > (body_size * 2) and upper_wick > 0
+        
         # Volume على 1m
         vol_last = float(df.iloc[-1]['v'])
         vol_avg = float(df['v'].iloc[-10:].mean())
         vol_ratio_1m = round(vol_last / vol_avg, 1) if vol_avg > 0 else 1
         
+        # ذاكرة الذئاب (هل هذا فخ؟)
+        is_trap = check_trap_memory(candidate, rsi_1m)
+        
+        # النطاق الذهبي للـ RSI
+        rsi_15m_ok = 32.5 <= candidate.get('rsi_15m', 40) <= 46.0
+        
+        # ترند الفريم الكبير (Multi-Timeframe)
+        trend_1h = candidate.get('trend_1h', 'BULLISH')
+        
         # Micro-conditions للـentry
         conditions = {
+            'rsi_15m_golden': rsi_15m_ok,
             'rsi_1m_ok': 25 <= rsi_1m <= 65,
             'green_candles_ok': green_count >= 1,
-            'volume_ok': vol_ratio_1m >= 0.8,
+            'volume_ok': vol_ratio_1m >= 1.0,
+            'no_toxic_wick': not has_toxic_wick,
+            'not_a_historical_trap': not is_trap,
+            'trend_1h_bullish': trend_1h != 'BEARISH'
         }
         
         all_ok = all(conditions.values())

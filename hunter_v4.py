@@ -125,6 +125,30 @@ def check_trap_memory(candidate, rsi_1m):
         log.error(f"Memory check error: {e}")
     return False
 
+def is_falling_knife(exchange, symbol, current_price):
+    """تحقق مما إذا كانت العملة قد انهارت للتو (تجنب الشراء بعد الـ Dump)"""
+    try:
+        candles = exchange.fetch_ohlcv(symbol, '15m', limit=8)
+        if not candles: return False
+        
+        df = pd.DataFrame(candles, columns=['t', 'o', 'h', 'l', 'c', 'v'])
+        highest_high = float(df['h'].max())
+        
+        # السقوط من أعلى قمة بأكثر من 4%
+        drop_pct = (highest_high - current_price) / highest_high
+        if drop_pct > 0.04:
+            return True
+            
+        # شمعة بيع ضخمة مؤخراً
+        last_candle = df.iloc[-1]
+        candle_drop = (float(last_candle['h']) - current_price) / float(last_candle['h'])
+        if candle_drop > 0.02:
+            return True
+            
+    except Exception as e:
+        log.debug(f"Knife check error: {e}")
+    return False
+
 
 def validate_entry(exchange, candidate):
     """تحقق من الدخول على 1m timeframe"""
@@ -165,6 +189,9 @@ def validate_entry(exchange, candidate):
         # ترند الفريم الكبير (Multi-Timeframe)
         trend_1h = candidate.get('trend_1h', 'BULLISH')
         
+        # هل هذا سقوط حر؟ (Falling Knife)
+        falling_knife = is_falling_knife(exchange, symbol, current_price)
+        
         # Micro-conditions للـentry
         conditions = {
             'rsi_15m_golden': rsi_15m_ok,
@@ -173,6 +200,7 @@ def validate_entry(exchange, candidate):
             'volume_ok': vol_ratio_1m >= 1.0,
             'no_toxic_wick': not has_toxic_wick,
             'not_a_historical_trap': not is_trap,
+            'not_falling_knife': not falling_knife,
             'trend_1h_bullish': trend_1h != 'BEARISH'
         }
         

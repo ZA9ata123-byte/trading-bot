@@ -1,0 +1,90 @@
+import os
+from dotenv import load_dotenv
+load_dotenv("/root/micro-scalping/.env")
+
+# ─── API Keys ─────────────────────────────────────────────
+BINANCE_API_KEY    = os.getenv("BINANCE_API_KEY")
+BINANCE_API_SECRET = os.getenv("BINANCE_API_SECRET")
+
+# ─── Telegram ─────────────────────────────────────────────
+TELEGRAM_TOKEN      = os.getenv("TELEGRAM_TOKEN", "8605696873:AAFLAY4_xI4D5BYb7dFdu0FV2hJDiMiQPGs")
+TELEGRAM_CHANNEL_AR = "-1003818709859"
+TELEGRAM_CHANNEL_EN = "-1003771026934"
+REPORT_CHANNEL      = "-1003756064073"
+
+# ─── الوضع ────────────────────────────────────────────────
+PAPER_TRADING = os.getenv("PAPER_TRADING", "True") == "True"
+
+# ─── رأسمال ───────────────────────────────────────────────
+CAPITAL          = float(os.getenv("CAPITAL", 200))
+TRADE_AMOUNT     = 25  # FORCED
+MAX_TRADES       = 5
+DAILY_LOSS_LIMIT = 8
+
+# ═══════════════════════════════════════════════════════════
+# 🐺 v4 — ضرب وهرب! شراء التصحيح فعملة صاعدة!
+# ═══════════════════════════════════════════════════════════
+# المنطق: عملة Top Gainer + RSI نزل = تصحيح مؤقت = ندخلو!
+# ═══════════════════════════════════════════════════════════
+
+# ─── التوقيت ───────────────────────────────────────────────
+MAX_TRADE_MINS     = 10           # 10 دقائق max
+BREAKEVEN_FEE      = 0.002        # عمولة 0.1% × 2
+
+# ─── SL/TP — 5 pips = ضرب وهرب! ──────────────────────────
+TP_PCT             = 0.006        # TP = 0.6% (5-6 pips)
+SL_PCT             = 0.004        # SL = 0.4%
+FORCE_EXIT_LOSS    = 0.008        # أقصى خسارة = 0.8%
+MAX_HOLD_MINS      = 15           # 15 دقيقة أقصى
+
+# ─── RSI — القلب! ────────────────────────────────────────
+RSI_BUY            = 45           # دخول RSI 1m < 35
+RSI_SELL           = 60           # خروج RSI 1m > 60
+RSI_OVERBOUGHT     = 70
+RSI_PERIOD         = 14
+
+# ─── الترند — 15m + 1h (بحال v4 الأصلي) ──────────────────
+TREND_MIN_SCORE    = 50
+
+# ─── فلترة Top Gainers ───────────────────────────────────
+MIN_PRICE          = 0.0001
+MAX_PRICE          = 0.05         # غير تحت $0.05!
+MIN_VOLUME_USD     = 500_000
+MIN_CHANGE_PCT     = 3            # خصها طالعة +3% على الأقل!
+MAX_CHANGE_PCT     = 40
+TOP_GAINERS        = 50
+QUOTE_CURRENCY     = "USDT"
+
+# ─── تشغيل ────────────────────────────────────────────────
+SLEEP_TIME         = 5
+BLACKLIST_MINS     = 10           # 10 دقائق blacklist
+
+# ─── Trailing — يتبع الربح! ──────────────────────────────
+TRAILING_ACTIVATION = 0.004       # بعد +0.4% = trailing يبدا
+BE_LOCK_PCT        = 0.002        # +0.2% = breakeven lock
+
+# ─── فئات العملات ─────────────────────────────────────────
+PRICE_TIERS = {
+    "TIER_A": {
+        "name": "$0.01-$0.05",
+        "min_price": 0.01, "max_price": 0.05,
+        "tp_pct": 0.006, "sl_pct": 0.004,
+        "min_volume": 1_000_000,
+    },
+    "TIER_B": {
+        "name": "$0.001-$0.0099",
+        "min_price": 0.001, "max_price": 0.0099,
+        "tp_pct": 0.008, "sl_pct": 0.005,
+        "min_volume": 500_000,
+    },
+    "TIER_C": {
+        "name": "$0.0001-$0.00099",
+        "min_price": 0.0001, "max_price": 0.00099,
+        "tp_pct": 0.012, "sl_pct": 0.008,
+        "min_volume": 300_000,
+    },
+}
+
+# ─── Learning ─────────────────────────────────────────────
+LEARNING_FILE    = "trade_memory.json"
+MIN_TRADES_LEARN = 15

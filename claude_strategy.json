@@ -1,0 +1,34 @@
+{
+  "winning_strategy": {
+    "entry": {
+      "rsi_min": 30,
+      "rsi_max": 45,
+      "min_change_pct": -2.0,
+      "max_change_pct": -0.5,
+      "min_volume_usd": 500000,
+      "min_trend_score": 7,
+      "prefer_coins": ["DOLO/USDT", "VIC/USDT", "MITO/USDT", "BB/USDT", "PORTAL/USDT"],
+      "avoid_coins": ["ARB/USDT", "DYM/USDT", "ONT/USDT", "PIXEL/USDT", "JST/USDT", "RARE/USDT"],
+      "entry_rules": ["دخول فقط عند RSI بين 30-45", "تجنب العملات اللي خسرت أكثر من $2", "الدخول بس لما السعر ينزل 0.5-2%"]
+    },
+    "exit": {
+      "tp_pct": 0.6,
+      "sl_pct": -0.8,
+      "rsi_exit_level": 65,
+      "rsi_exit_min_gain": 0.3,
+      "trail_activation": 0.4,
+      "trail_distance": 0.15,
+      "max_hold_minutes": 8,
+      "exit_rules": ["خروج عند TP 0.6% أو RSI فوق 65", "خروج إجباري بعد 8 دقائق", "تفعيل trailing عند 0.4% مع مسافة 0.15%"]
+    },
+    "risk": {
+      "max_daily_loss": -15.0,
+      "max_consecutive_losses": 4,
+      "trade_amount": 100
+    }
+  },
+  "analysis": "الاستراتيجية الحالية تخسر بسبب العمولة العالية (0.3$ لكل صفقة) والـ SL الكثيرة. TP و RSI exits مربحة 100% لكن قليلة. الحل هو رفع TP إلى 0.6% وتقليل وقت الصفقات إلى 8 دقائق كحد أقصى. RSI بين 30-45 يعطي أفضل نتائج.",
+  "key_insights": ["العمولة 0.3$ تأكل 50% من الأرباح الصغيرة", "TP و RSI exits عندهم WR 100% لازم نركز عليهم", "الصفقات القصيرة (0-2 دقيقة) أفضل من الطويلة", "تجنب العملات اللي خسرت أكثر من $2 نهائياً"],
+  "expected_wr": 60,
+  "expected_daily_pnl": 8.5
+}

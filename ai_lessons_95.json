@@ -1,0 +1,2475 @@
+{
+  "lessons": [
+    {
+      "time": "2026-03-29 22:24:38.790045",
+      "symbol": "ZBT/USDT",
+      "won": false,
+      "profit": -0.1672,
+      "rsi": 22.5,
+      "analysis": "خسرت الصفقة رغم RSI منخفض جداً (22.5) لأن العملة كانت في اتجاه هبوطي قوي ولم تجد دعم للارتداد",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول إذا كان الاتجاه العام هبوطي قوي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND no_bounce_confirmation AND tier_a_coin",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 22:54:00.245353",
+      "symbol": "C/USDT",
+      "won": true,
+      "profit": 0.2525,
+      "rsi": 31.6,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI عند 31.6 والخروج بهدف محدد مسبقاً",
+      "lesson": "منطقة التشبع البيعي تحت 35 مع عملات TIER_A توفر فرص ارتداد جيدة حتى مع الشموع الهابطة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 32 AND tier = TIER_A AND candle_pattern = bearish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 23:13:03.645882",
+      "symbol": "OGN/USDT",
+      "won": true,
+      "profit": 0.4871,
+      "rsi": 32.9,
+      "analysis": "ربحت الصفقة بسبب RSI منخفض جداً (32.9) مما يشير لمنطقة تشبع بيعي قوية والسعر ارتد بسرعة",
+      "lesson": "المناطق المتشبعة بيعياً مع RSI أقل من 35 تعطي فرص ارتداد سريعة وقوية",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 100",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 23:16:47.332213",
+      "symbol": "LA/USDT",
+      "won": false,
+      "profit": -0.181,
+      "rsi": 28.9,
+      "analysis": "خسرت الصفقة رغم RSI منخفض (28.9) لأن العملة استمرت في التراجع ولم تجد دعم قوي خلال 7 دقائق",
+      "lesson": "RSI المنخفض وحده غير كافي للشراء إذا لم تكن هناك إشارات دعم إضافية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_type = عادية AND tier = TIER_A",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 23:17:24.691639",
+      "symbol": "SOPH/USDT",
+      "won": true,
+      "profit": 0.3566,
+      "rsi": 33.7,
+      "analysis": "ربحت الصفقة بسبب دخول ممتاز في منطقة تشبع بيعي قوية مع RSI منخفض ونقطة دعم قوية",
+      "lesson": "منطقة RSI أقل من 35 مع سكور عالي تعطي فرص ربح سريعة وآمنة في الأطر القصيرة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 85 AND tier = TIER_B",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 23:21:18.117012",
+      "symbol": "SENT/USDT",
+      "won": false,
+      "profit": -0.5283,
+      "rsi": 15.9,
+      "analysis": "رغم RSI المنخفض جداً وشمعة Hammer، السعر استمر في الانخفاض فوراً بدون أي ارتداد",
+      "lesson": "RSI أقل من 20 مع شمعة Hammer قد يكون إشارة كاذبة في الأسواق الهابطة القوية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND candle_pattern = Hammer AND max_profit = 0%",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-29 23:25:22.765074",
+      "symbol": "SOPH/USDT",
+      "won": true,
+      "profit": 0.4178,
+      "rsi": 29.9,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض جداً عند 29.9 مما أدى إلى ارتداد سريع",
+      "lesson": "العملات من الفئة B مع RSI أقل من 30 تعطي فرص ارتداد سريعة وموثوقة خلال دقائق قليلة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND tier = TIER_B AND score > 90",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:09:41.905544",
+      "symbol": "ZBT/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 11.3,
+      "analysis": "الخسارة حدثت بسبب الدخول في اتجاه هابط قوي رغم RSI المنخفض جداً",
+      "lesson": "RSI المنخفض وحده غير كافٍ للدخول إذا كان الاتجاه العام هابطاً بقوة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 15 AND candle_trend = bearish",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:11:17.769776",
+      "symbol": "OPN/USDT",
+      "won": false,
+      "profit": -0.4519,
+      "rsi": 22.4,
+      "analysis": "الدخول في RSI منخفض جداً (22.4) ولكن الترند الهابط كان أقوى من إشارة التشبع البيعي",
+      "lesson": "RSI المنخفض وحده لا يكفي إذا كان الترند الهابط قوياً والشموع هابطة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND candles = bearish",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:32:01.330158",
+      "symbol": "C/USDT",
+      "won": false,
+      "profit": -0.5619,
+      "rsi": 21.9,
+      "analysis": "خسارة فورية بسبب الدخول في منطقة تشبع بيعي قوي مع RSI منخفض جداً دون انتظار إشارات تأكيد",
+      "lesson": "RSI المنخفض وحده لا يكفي كإشارة شراء بل يجب انتظار بداية الانتعاش الفعلي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND duration = 0 minutes",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:39:53.225161",
+      "symbol": "SOPH/USDT",
+      "won": false,
+      "profit": -0.5056,
+      "rsi": 30.9,
+      "analysis": "خسرت الصفقة بسبب عدم وجود قوة شرائية كافية رغم RSI المنخفض في عملة TIER_B ذات سيولة محدودة",
+      "lesson": "تجنب العملات TIER_B عند RSI المنخفض جداً لأنها قد تستمر في الانخفاض بدون دعم قوي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "tier = TIER_B AND RSI < 32",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:41:42.045344",
+      "symbol": "C/USDT",
+      "won": false,
+      "profit": -0.0417,
+      "rsi": 23.9,
+      "analysis": "الصفقة دخلت في منطقة تشبع بيعي قوية (RSI 23.9) وحققت ربح جيد 0.58% لكن التريلنج ستوب ضيق جداً (+0.28%) أدى لإغلاق مبكر والخسارة",
+      "lesson": "التريلنج ستوب الضيق جداً يمكن أن يضر بالصفقات الواعدة حتى لو كان الدخول في توقيت ممتاز",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND trail_stop > 0.5%",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 00:46:00.541547",
+      "symbol": "LA/USDT",
+      "won": false,
+      "profit": -0.536,
+      "rsi": 21.5,
+      "analysis": "دخلت في منطقة تشبع بيعي قوية مع RSI 21.5 لكن الترند الهابط كان أقوى من الانتعاش المتوقع",
+      "lesson": "RSI منخفض جداً لا يعني دائماً انتعاش فوري، خاصة عندما يكون الترند الهابط قوياً",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND candle_pattern = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:46:59.782592",
+      "symbol": "SOPH/USDT",
+      "won": true,
+      "profit": 0.3137,
+      "rsi": 18.7,
+      "analysis": "الصفقة ربحت بسبب الدخول عند مستوى RSI منخفض جداً (18.7) مما يشير لحالة تشبع بيعي قوية",
+      "lesson": "مستويات RSI المنخفضة جداً تحت 20 تعطي إشارات ارتداد قوية خاصة مع Score عالي",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 20 AND Score > 90",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:50:25.093503",
+      "symbol": "CFG/USDT",
+      "won": false,
+      "profit": -0.4697,
+      "rsi": 23.3,
+      "analysis": "الصفقة خسرت بسبب الدخول في منطقة تشبع بيعي شديد مع RSI منخفض جداً مما أدى لاستمرار الانخفاض رغم ظهور إشارة شراء",
+      "lesson": "RSI المنخفض جداً قد يشير لاستمرار الهبوط بدلاً من الارتداد خاصة في العملات الصغيرة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND tier = TIER_A",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 00:54:53.490827",
+      "symbol": "STO/USDT",
+      "won": true,
+      "profit": 0.2638,
+      "rsi": 33.6,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض جداً عند 33.6 مما أدى لارتداد سريع",
+      "lesson": "المناطق المتشبعة بيعياً مع RSI أقل من 35 تعطي فرص ارتداد سريعة وقوية خلال دقائق قليلة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 95 AND tier = TIER_A",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 01:14:18.921545",
+      "symbol": "BANANAS31/USDT",
+      "won": false,
+      "profit": -0.2303,
+      "rsi": 32.1,
+      "analysis": "دخلت في منطقة تشبع بيعي جيدة لكن العملة واصلت الانخفاض لـ -0.48% مما يشير لترند هابط قوي",
+      "lesson": "RSI منخفض لا يضمن الارتداد إذا كان الترند الأساسي هابط والحجم ضعيف",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND max_profit < 0.1% AND reach_loss > -0.4%",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 01:15:08.269546",
+      "symbol": "STO/USDT",
+      "won": false,
+      "profit": -0.1669,
+      "rsi": 31.8,
+      "analysis": "الصفقة خسرت رغم RSI منخفض ووصول لربح 0.40% لأن وقف الخسارة كان ضيق جداً -0.13% مقارنة بالربح المحقق",
+      "lesson": "وقف الخسارة الضيق جداً يمكن أن يقطع الصفقات الجيدة قبل أن تحقق إمكانياتها الكاملة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND max_profit > 0.30% AND stop_loss > -0.20%",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 01:37:01.480794",
+      "symbol": "OPN/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 34.9,
+      "analysis": "RSI منخفض 34.9 يدل على oversold لكن السعر استمر بالانخفاض رغم وصوله لربح 0.40% مما يشير لضعف الاتجاه الصاعد",
+      "lesson": "عدم الاعتماد على RSI منخفض وحده للدخول بل يجب انتظار إشارات تأكيد إضافية للانعكاس",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND no_reversal_confirmation",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "SHOULD_EXIT_EARLIER"
+    },
+    {
+      "time": "2026-03-30 01:45:02.618414",
+      "symbol": "SOPH/USDT",
+      "won": false,
+      "profit": -0.4521,
+      "rsi": 27.2,
+      "analysis": "خسرت الصفقة بسبب دخول في ترند هابط قوي رغم RSI منخفض والسعر استمر في الانخفاض بدلاً من الارتداد",
+      "lesson": "RSI منخفض لا يضمن الارتداد عندما يكون الترند العام هابط بقوة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_trend = bearish AND tier = TIER_B",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 01:45:44.936321",
+      "symbol": "LA/USDT",
+      "won": true,
+      "profit": 0.0096,
+      "rsi": 32.0,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض عند 32 وسكور عالي 92.5",
+      "lesson": "الدخول في مناطق التشبع البيعي مع سكور عالي يحقق أرباح سريعة حتى لو كانت محدودة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 90 AND tier = TIER_A",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 01:46:09.200529",
+      "symbol": "CATI/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 24.4,
+      "analysis": "الصفقة خسرت رغم RSI منخفض جداً (24.4) لأن الترند العام كان هابط والسوق استمر في الانخفاض",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول في صفقة شراء إذا كان الترند العام هابط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_trend = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 01:55:45.686580",
+      "symbol": "SENT/USDT",
+      "won": false,
+      "profit": -0.2629,
+      "rsi": 25.2,
+      "analysis": "خسرت بسبب الدخول المبكر جداً عند RSI منخفض مما يعني أن العملة لم تصل لنقطة التشبع البيعي الكاملة",
+      "lesson": "RSI حول 25 قد يكون مبكراً للدخول ويجب انتظار مستويات أقل أو إشارات تأكيد إضافية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI > 22 AND RSI < 30 AND tier = TIER_A",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:01:07.146654",
+      "symbol": "CATI/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 25.2,
+      "analysis": "خسرت الصفقة رغم RSI منخفض وشمعة Hammer بسبب عدم وجود تأكيد كافي لانعكاس الاتجاه",
+      "lesson": "شمعة Hammer وحدها مع RSI منخفض غير كافية للدخول بدون تأكيد من حجم التداول والاتجاه العام",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_pattern = Hammer AND volume_confirmation = false",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:07:06.444183",
+      "symbol": "SOPH/USDT",
+      "won": true,
+      "profit": 0.3167,
+      "rsi": 33.9,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض والخروج السريع عند الهدف",
+      "lesson": "الدخول عند RSI أقل من 35 في عملات TIER_B يحقق أرباح سريعة بنسبة عالية",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND tier = TIER_B AND candle_type = normal",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:08:38.031699",
+      "symbol": "LA/USDT",
+      "won": false,
+      "profit": -0.0449,
+      "rsi": 23.7,
+      "analysis": "الصفقة خسرت رغم RSI منخفض جداً والسكور العالي لأن الترند العام كان هابطاً والتوقيت كان مبكراً جداً",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول إذا كان الترند العام هابطاً والشموع تؤكد الانخفاض",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND candle_pattern = bearish AND duration < 10min",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:12:31.755932",
+      "symbol": "ZBT/USDT",
+      "won": false,
+      "profit": -0.2353,
+      "rsi": 18.0,
+      "analysis": "خسرت رغم RSI منخفض جداً وإشارة Hammer لأن السوق استمر في الهبوط ولم يحدث انعكاس فوري",
+      "lesson": "RSI المنخفض جداً قد يشير لاستمرار الضغط البيعي وليس بالضرورة انعكاس فوري",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND candle_pattern = Hammer AND max_profit = 0",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:19:28.002345",
+      "symbol": "FIO/USDT",
+      "won": true,
+      "profit": 0.4137,
+      "rsi": 0.0,
+      "analysis": "الصفقة ربحت بفضل الدخول مع الاتجاه الصاعد وتحقيق هدف الربح المحدد بسرعة خلال 5 دقائق فقط",
+      "lesson": "عملات الـ TIER_B يمكن أن تحقق أرباح سريعة عند الدخول مع الاتجاه الصحيح والخروج عند الهدف المحدد",
+      "rule": {
+        "type": "PREFER",
+        "condition": "candle_pattern = bullish AND tier = TIER_B AND quick_tp_available",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "NEUTRAL",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 02:47:10.809423",
+      "symbol": "CHZ/USDT",
+      "won": false,
+      "profit": -0.4083,
+      "rsi": 33.9,
+      "analysis": "خسرت الصفقة بسبب الدخول في ترند هابط قوي رغم RSI منخفض والخروج القسري منع خسائر أكبر",
+      "lesson": "RSI المنخفض لا يكفي للدخول إذا كان الترند العام هابطاً والشموع تؤكد الهبوط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND candles = bearish AND no_immediate_profit",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 03:07:48.488145",
+      "symbol": "ONT/USDT",
+      "won": true,
+      "profit": 0.3668,
+      "rsi": 33.4,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض والخروج السريع عند تحقيق الهدف",
+      "lesson": "المناطق المتشبعة بيعياً مع RSI أقل من 35 توفر فرص دخول ممتازة للصفقات السريعة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 95 AND tier = TIER_A",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 03:36:04.349630",
+      "symbol": "D/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 32.6,
+      "analysis": "الخسارة حدثت بسبب خروج سريع جداً بالـ trail stop بعد 0 دقيقة رغم RSI منخفض ووجود شمعة صاعدة",
+      "lesson": "الـ trail stop بـ 0.20% ضيق جداً للعملات المتقلبة ولا يعطي الصفقة فرصة للنمو",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND candle_pattern = bullish AND trail_stop > 0.5%",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 03:45:50.792486",
+      "symbol": "D/USDT",
+      "won": true,
+      "profit": 0.3505,
+      "rsi": 24.6,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض جداً عند 24.6 مما أدى لارتداد سريع",
+      "lesson": "الدخول في مناطق التشبع البيعي الشديدة يعطي فرص ارتداد سريعة حتى مع الاتجاه الهابط",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_pattern = bearish",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 03:55:00.142066",
+      "symbol": "SIGN/USDT",
+      "won": true,
+      "profit": 0.2002,
+      "rsi": 25.3,
+      "analysis": "ربحت الصفقة بسبب دخول ممتاز عند RSI منخفض جداً (25.3) مع سكور عالي مما أدى لارتداد سريع",
+      "lesson": "RSI أقل من 30 مع سكور أعلى من 90 يعطي فرص ارتداد قوية حتى مع الشموع الهابطة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND score > 90 AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 04:18:26.567498",
+      "symbol": "NOM/USDT",
+      "won": true,
+      "profit": 1.3436,
+      "rsi": 32.0,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية عند RSI 32 مع نقطة عالية وتنفيذ سريع لهدف الربح",
+      "lesson": "المناطق المتشبعة بيعياً مع النقاط العالية تعطي فرص ربح سريعة إذا تم التنفيذ بدقة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 90 AND tier = B",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 04:21:42.089842",
+      "symbol": "DYDX/USDT",
+      "won": false,
+      "profit": -0.2543,
+      "rsi": 31.0,
+      "analysis": "خسرت الصفقة بسبب الدخول في مستوى RSI منخفض جداً (31) مما يشير لضغط بيع مستمر ولم تحقق أي ربح على الإطلاق",
+      "lesson": "مستويات RSI الأقل من 35 في العملات المتقلبة قد تشير لاستمرار الهبوط وليس انعكاس فوري",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND duration = 0 minutes AND tier = TIER_A",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 04:31:10.719502",
+      "symbol": "USUAL/USDT",
+      "won": false,
+      "profit": -0.0218,
+      "rsi": 34.1,
+      "analysis": "دخلت في منطقة تشبع بيعي جيدة لكن السوق استمر في الهبوط وضرب الستوب لوس بسرعة رغم وصولها لربح 0.47%",
+      "lesson": "حتى مع RSI منخفض ووصول الصفقة لربح جيد، يجب تحريك الستوب لوس للحماية عند تحقق أرباح سريعة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "profit_reached > 0.4% AND duration < 5min",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_EXIT_EARLIER"
+    },
+    {
+      "time": "2026-03-30 04:31:35.035517",
+      "symbol": "RESOLV/USDT",
+      "won": true,
+      "profit": 0.0241,
+      "rsi": 32.9,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع إشارة انعكاس من شمعة Hammer",
+      "lesson": "الدخول عند RSI منخفض مع أنماط الانعكاس الإيجابية يحقق أرباح سريعة ومستقرة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND candle_pattern = Hammer AND tier = TIER_A",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 04:34:39.408606",
+      "symbol": "币安人生/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 29.4,
+      "analysis": "الصفقة دخلت في منطقة تشبع بيعي جيدة (RSI 29.4) ووصلت لربح 0.46% لكن الـ Trail Stop ضيق جداً (+0.20%) أدى لإغلاقها بخسارة عند تراجع بسيط",
+      "lesson": "Trail Stop بنسبة 0.20% ضيق جداً للعملات الرقمية ذات التقلبات العالية ويجب زيادته لإعطاء مساحة أكبر للحركة الطبيعية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "trail_stop <= 0.30% AND rsi_entry < 30",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 04:35:03.607386",
+      "symbol": "DYDX/USDT",
+      "won": true,
+      "profit": 0.1572,
+      "rsi": 34.3,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض والاستفادة من الارتداد الطبيعي",
+      "lesson": "الدخول في مناطق RSI المنخفضة مع عملات TIER_A يحقق نتائج إيجابية عند وجود شموع صاعدة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND tier = TIER_A AND candle_pattern = bullish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 04:38:44.966407",
+      "symbol": "RESOLV/USDT",
+      "won": true,
+      "profit": 0.1475,
+      "rsi": 25.8,
+      "analysis": "ربحت بسبب الدخول المثالي في منطقة تشبع بيعي قوية عند RSI 25.8 مع اتجاه صاعد قوي",
+      "lesson": "الدخول في المناطق المتشبعة بيعياً مع وجود زخم صاعد يحقق أرباح سريعة وآمنة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND candle_pattern = bullish AND tier = TIER_A",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 04:48:29.898916",
+      "symbol": "NOM/USDT",
+      "won": true,
+      "profit": 0.4319,
+      "rsi": 34.8,
+      "analysis": "صفقة ناجحة بسبب دخول في منطقة تشبع بيعي قوية مع RSI منخفض ونتيجة عالية",
+      "lesson": "الدخول عند RSI أقل من 35 مع score عالي يعطي فرص ربح سريعة وقوية",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 90 AND tier = TIER_B",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:01:03.511105",
+      "symbol": "SIGN/USDT",
+      "won": false,
+      "profit": -0.3686,
+      "rsi": 25.5,
+      "analysis": "خسرت الصفقة رغم RSI منخفض جداً لأن السوق استمر في الهبوط دون انعكاس",
+      "lesson": "RSI المنخفض وحده لا يكفي، يجب انتظار إشارات تأكيد إضافية للانعكاس",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND no_reversal_confirmation",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:02:10.063493",
+      "symbol": "NOM/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 34.3,
+      "analysis": "خسارة فورية رغم RSI منخفض وScore جيد، مما يشير لضعف شديد في العملة أو توقيت سيء",
+      "lesson": "RSI المنخفض وحده لا يضمن الربح، خاصة في عملات TIER_B التي قد تكون متقلبة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "tier = TIER_B AND exit_duration = 0 minutes",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:05:05.005829",
+      "symbol": "DYDX/USDT",
+      "won": true,
+      "profit": 0.1064,
+      "rsi": 34.8,
+      "analysis": "ربحت الصفقة بسبب دخول جيد عند RSI منخفض (34.8) مما يشير لذروة بيع واستدراك طبيعي للسعر",
+      "lesson": "الدخول عند مستويات RSI المنخفضة (تحت 35) يعطي فرص جيدة للاستدراك السريع",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 100",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:09:20.116370",
+      "symbol": "ENJ/USDT",
+      "won": true,
+      "profit": 0.2079,
+      "rsi": 29.6,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية عند RSI 29.6 مع سكور مرتفع 115.5 مما أدى لارتداد سريع",
+      "lesson": "المناطق المتشبعة بيعياً مع السكور المرتفع تعطي فرص ارتداد سريعة وموثوقة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND score > 100 AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:22:51.055142",
+      "symbol": "币安人生/USDT",
+      "won": true,
+      "profit": 0.0155,
+      "rsi": 22.7,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض جداً عند 22.7",
+      "lesson": "المناطق المتشبعة بيعياً مع RSI أقل من 25 توفر فرص ارتداد جيدة حتى لو كانت صغيرة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND score > 100",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 05:58:21.515060",
+      "symbol": "D/USDT",
+      "won": false,
+      "profit": -0.0147,
+      "rsi": 30.8,
+      "analysis": "خسرت الصفقة بسبب دخولي على الشموع الهابطة رغم RSI المنخفض مما أدى لاستمرار الانخفاض",
+      "lesson": "لا تدخل صفقة شراء عندما تكون الشموع هابطة حتى لو كان RSI منخفض",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND candles = bearish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 06:33:40.378694",
+      "symbol": "ENJ/USDT",
+      "won": true,
+      "profit": 0.2575,
+      "rsi": 28.2,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية عند RSI 28.2 مما أدى لارتداد سريع وتحقيق الهدف",
+      "lesson": "المناطق المتشبعة بيعياً تحت 30 مع Score عالي تعطي فرص ارتداد سريعة وموثوقة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND score > 100 AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 06:39:06.203367",
+      "symbol": "DYDX/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 28.4,
+      "analysis": "خسرت الصفقة رغم RSI منخفض لأن الترند العام كان هابط والسوق لم يجد دعم قوي للارتداد",
+      "lesson": "RSI منخفض وحده غير كافي للشراء إذا كان الترند العام هابط والشموع تؤكد استمرار الهبوط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_pattern = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 06:40:02.633892",
+      "symbol": "OGN/USDT",
+      "won": false,
+      "profit": -0.0535,
+      "rsi": 34.7,
+      "analysis": "الصفقة خسرت رغم RSI المنخفض والشمعة الصاعدة لكن الخروج كان مبكراً جداً والأرباح كانت ضئيلة",
+      "lesson": "عدم الخروج المبكر عند وجود إشارات قوية ومساحة للنمو",
+      "rule": {
+        "type": "AVOID",
+        "condition": "exit_time < 10m AND max_profit < 0.1% AND RSI < 35",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 06:56:25.964374",
+      "symbol": "ONT/USDT",
+      "won": true,
+      "profit": 0.202,
+      "rsi": 29.8,
+      "analysis": "ربحت الصفقة بسبب دخول ممتاز عند RSI منخفض 29.8 مما يشير لتشبع بيعي وإمكانية ارتداد",
+      "lesson": "RSI أقل من 30 يوفر فرص دخول ممتازة للصفقات قصيرة المدى حتى مع الاتجاه الهابط",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND candle_pattern = bearish AND tier = A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 07:01:43.242192",
+      "symbol": "ONG/USDT",
+      "won": false,
+      "profit": -0.1907,
+      "rsi": 31.1,
+      "analysis": "الصفقة خسرت رغم RSI منخفض لأن الترند العام كان هابطاً والسوق لم يكن مستعداً للارتداد",
+      "lesson": "RSI منخفض وحده غير كافي إذا كان الترند الهابط قوياً ولا توجد إشارات انعكاس واضحة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND candle_pattern = bearish AND no_reversal_signals",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 07:15:55.095513",
+      "symbol": "ENJ/USDT",
+      "won": true,
+      "profit": 0.0192,
+      "rsi": 24.7,
+      "analysis": "ربحت الصفقة بسبب الدخول في منطقة تشبع بيعي قوية مع RSI منخفض جداً عند 24.7",
+      "lesson": "RSI المنخفض جداً تحت 25 يمكن أن يعطي إشارات ارتداد قوية حتى مع الشموع الهابطة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_trend = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 07:23:48.643356",
+      "symbol": "ONT/USDT",
+      "won": false,
+      "profit": -0.7794,
+      "rsi": 26.9,
+      "analysis": "الدخول في منطقة تشبع بيعي قوية مع RSI 26.9 لم يحقق الانتعاش المتوقع وواجه ضغط بيعي مستمر أدى للخروج القسري",
+      "lesson": "منطقة التشبع البيعي الشديدة قد تشير لاستمرار الهبوط وليس بالضرورة فرصة شراء فورية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND score > 100 AND timeframe = 3min",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 07:32:23.204324",
+      "symbol": "币安人生/USDT",
+      "won": true,
+      "profit": 0.1283,
+      "rsi": 29.3,
+      "analysis": "ربحت الصفقة لأن RSI كان في منطقة ذروة البيع (29.3) مما أدى إلى ارتداد صعودي سريع",
+      "lesson": "مناطق ذروة البيع في RSI توفر فرص دخول جيدة حتى مع وجود اتجاه هابط قصير المدى",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND candle_pattern = bearish",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 07:56:36.917137",
+      "symbol": "ONG/USDT",
+      "won": false,
+      "profit": -0.2666,
+      "rsi": 27.7,
+      "analysis": "الصفقة خسرت لأن السعر انخفض فوراً ولم يحدث أي انتعاش رغم RSI المنخفض جداً عند 27.7",
+      "lesson": "RSI المنخفض جداً قد يشير لاستمرار الهبوط بدلاً من الانتعاش في الأطر الزمنية القصيرة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND max_drawdown_immediate > -0.40%",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 08:17:24.772095",
+      "symbol": "币安人生/USDT",
+      "won": false,
+      "profit": -0.4456,
+      "rsi": 26.3,
+      "analysis": "خسرت الصفقة بسبب RSI منخفض جداً (26.3) مما يشير لاستمرار الهبوط رغم الإشارة الإيجابية",
+      "lesson": "RSI أقل من 30 مع عدم وجود إشارات قوية أخرى قد يكون فخ شراء في ترند هابط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 27 AND score = 100 AND candle_type = normal",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 08:34:55.289223",
+      "symbol": "FIO/USDT",
+      "won": true,
+      "profit": 0.1534,
+      "rsi": 24.8,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوي عند RSI 24.8 مما أدى لارتداد سريع",
+      "lesson": "المناطق المتشبعة بيعياً عند RSI أقل من 25 توفر فرص ارتداد جيدة حتى لو كانت العملة من الفئة B",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND tier = TIER_B",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 09:37:15.713616",
+      "symbol": "FIO/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 22.6,
+      "analysis": "الصفقة خسرت بسبب عدم وجود حركة سعر إطلاقاً رغم RSI منخفض مما يشير لضعف في السيولة أو التداول",
+      "lesson": "عملات TIER_B قد تفتقر للسيولة الكافية لتحقيق حركة سعر حتى مع مؤشرات فنية قوية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "tier = TIER_B AND max_profit = 0% AND max_loss = 0%",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 09:48:26.266632",
+      "symbol": "ENJ/USDT",
+      "won": false,
+      "profit": -0.029,
+      "rsi": 34.9,
+      "analysis": "خسرت الصفقة بسبب الخروج المبكر عند البريك إيفن رغم وجود إشارات شراء قوية مع RSI منخفض وشمعة Hammer",
+      "lesson": "يجب إعطاء الصفقات وقت أكبر للتطور خاصة مع الإشارات الفنية القوية",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND candle_pattern = Hammer AND tier = A",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 10:48:52.872636",
+      "symbol": "ARKM/USDT",
+      "won": true,
+      "profit": 0.4102,
+      "rsi": 21.4,
+      "analysis": "الصفقة ربحت بسبب الدخول في منطقة تشبع بيعي قوية عند RSI 21.4 مما أدى لارتداد سريع",
+      "lesson": "RSI المنخفض جداً تحت 25 مع Score عالي فوق 100 يعطي فرص ارتداد سريعة ومربحة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND Score > 100 AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 10:57:41.598893",
+      "symbol": "USUAL/USDT",
+      "won": true,
+      "profit": 0.3673,
+      "rsi": 31.9,
+      "analysis": "ربحت الصفقة بسرعة بسبب دخول مبكر في منطقة تشبع بيعي قوية مع RSI منخفض جداً",
+      "lesson": "الدخول في مناطق التشبع البيعي القوية مع score عالي يحقق أرباح سريعة حتى مع الترند الهابط",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND score > 85 AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:05:48.402133",
+      "symbol": "ALT/USDT",
+      "won": false,
+      "profit": -0.2563,
+      "rsi": 8.1,
+      "analysis": "رغم RSI المنخفض جداً عند 8.1 إلا أن العملة استمرت في الهبوط ولم تجد أرضية دعم قوية",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول في صفقة، يجب انتظار إشارات تأكيد إضافية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 10 AND tier = TIER_B AND no_bullish_confirmation",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:07:35.275823",
+      "symbol": "ARKM/USDT",
+      "won": true,
+      "profit": 0.4102,
+      "rsi": 0.0,
+      "analysis": "الصفقة حققت ربحاً سريعاً بسبب الدخول في عملة من الفئة الأولى TIER_A مع سكور عالي 102.5",
+      "lesson": "العملات من فئة TIER_A مع السكور العالي تحقق أرباحاً سريعة وآمنة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "TIER = TIER_A AND Score > 100",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "NEUTRAL",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:08:43.891963",
+      "symbol": "WIF/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 11.2,
+      "analysis": "خسرت الصفقة رغم RSI منخفض جداً (11.2) لأن الترند العام كان هابطاً والسعر لم يجد دعم كافي",
+      "lesson": "RSI منخفض وحده غير كافي إذا كان الترند العام هابطاً والشموع تؤكد استمرار الهبوط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 15 AND candle_pattern = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:08:48.701241",
+      "symbol": "USUAL/USDT",
+      "won": false,
+      "profit": -0.0633,
+      "rsi": 22.5,
+      "analysis": "خسرت بسبب دخول في شمعة هابطة رغم RSI منخفض جداً، لكن الاتجاه العام كان ضدي",
+      "lesson": "RSI منخفض وحده غير كافي إذا كانت الشموع الحالية هابطة بقوة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND current_candle = bearish",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:16:16.664151",
+      "symbol": "CHZ/USDT",
+      "won": false,
+      "profit": -0.3796,
+      "rsi": 27.2,
+      "analysis": "الصفقة خسرت لأن العملة واصلت الهبوط رغم RSI المنخفض والشمعة الهابطة أكدت عدم وجود انعكاس فوري",
+      "lesson": "RSI المنخفض وحده غير كافي للشراء إذا كانت الشمعة هابطة والزخم السلبي مستمر",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_pattern = 'هابطة'",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:20:32.695639",
+      "symbol": "BOME/USDT",
+      "won": false,
+      "profit": -0.3604,
+      "rsi": 24.0,
+      "analysis": "رغم أن RSI منخفض جداً عند 24 مما يشير لحالة تشبع بيعي، إلا أن العملة من الفئة C والسعر لم يرتد إطلاقاً واستمر في الهبوط",
+      "lesson": "عملات الفئة C تحتاج RSI أقل من 20 أو إشارات قوية إضافية للدخول حتى لو كانت في منطقة تشبع بيعي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "tier = TIER_C AND RSI > 22 AND max_profit = 0%",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "NEUTRAL",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:20:38.252080",
+      "symbol": "ZK/USDT",
+      "won": false,
+      "profit": -0.1285,
+      "rsi": 15.8,
+      "analysis": "رغم RSI المنخفض جداً (15.8) والنقاط العالية (97.5)، الاتجاه الهابط كان أقوى من إشارة التشبع البيعي",
+      "lesson": "إشارات التشبع البيعي قد تفشل في الأسواق الهابطة القوية حتى مع RSI منخفض جداً",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND candles_trend = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:22:45.483218",
+      "symbol": "XPL/USDT",
+      "won": false,
+      "profit": -0.2101,
+      "rsi": 16.6,
+      "analysis": "الصفقة خسرت رغم RSI منخفض جداً لأن العملة استمرت في الهبوط دون انتعاش قوي كافي",
+      "lesson": "RSI المنخفض جداً قد يشير لضعف شديد في العملة وليس فرصة شراء فورية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND شموع عادية",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:25:14.900245",
+      "symbol": "ALT/USDT",
+      "won": false,
+      "profit": -0.1784,
+      "rsi": 19.0,
+      "analysis": "رغم RSI المتدني جداً عند 19 والذي يشير لتشبع بيعي قوي، العملة لم تتعافى وانخفضت مباشرة دون أي ارتداد",
+      "lesson": "RSI المتدني وحده غير كافي للدخول في عملات TIER_B التي قد تستمر في الانخفاض رغم التشبع البيعي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND tier = TIER_B AND candle_type = عادية",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:26:29.482993",
+      "symbol": "HYPER/USDT",
+      "won": false,
+      "profit": -0.4571,
+      "rsi": 16.9,
+      "analysis": "خسرت الصفقة لأن الدخول كان مبكراً جداً رغم RSI المتشبع بيعياً والترند الهابط استمر",
+      "lesson": "RSI المنخفض جداً لا يعني انعكاس فوري خاصة مع وجود شموع هابطة قوية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND candle_trend = bearish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:31:47.459869",
+      "symbol": "STRK/USDT",
+      "won": false,
+      "profit": -0.3874,
+      "rsi": 0.0,
+      "analysis": "الصفقة خسرت بسبب الدخول مع RSI عند الصفر وشمعة هابطة مما يشير لاستمرار الهبوط",
+      "lesson": "تجنب الدخول عندما يكون RSI عند القيم القصوى مع تأكيد الاتجاه العكسي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI <= 5 AND candle_pattern = bearish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:35:16.391702",
+      "symbol": "XPL/USDT",
+      "won": false,
+      "profit": -0.2105,
+      "rsi": 20.4,
+      "analysis": "رغم RSI منخفض جداً (20.4) مما يشير لتشبع بيعي، إلا أن السعر استمر في الانخفاض ولم يحدث انتعاش سريع",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول في صفقة شراء، يجب انتظار إشارات انعكاس إضافية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND no_reversal_signals",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:35:53.216276",
+      "symbol": "KITE/USDT",
+      "won": false,
+      "profit": -0.3884,
+      "rsi": 32.0,
+      "analysis": "الصفقة خسرت بسبب دخول مبكر في عملة TIER_A مع RSI منخفض لكن الترند العام كان هابطاً",
+      "lesson": "RSI منخفض وحده غير كافي للدخول إذا كان الترند قوي هابط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND candle_trend = bearish AND tier = TIER_A",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:39:41.288856",
+      "symbol": "OP/USDT",
+      "won": false,
+      "profit": -0.1466,
+      "rsi": 16.2,
+      "analysis": "دخلت في منطقة تشبع بيعي قوي مع RSI 16.2 لكن السعر لم يحقق ارتداد قوي كافي للوصول للهدف",
+      "lesson": "RSI المنخفض جداً لا يضمن ارتداد فوري قوي خاصة في الأسواق الهابطة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND timeframe = 7m",
+        "confidence": 0.6
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:44:40.534630",
+      "symbol": "ARKM/USDT",
+      "won": false,
+      "profit": -0.6051,
+      "rsi": 16.4,
+      "analysis": "خسرت الصفقة لأن RSI 16.4 وإن كان يشير لتشبع بيعي شديد، إلا أن الشموع الهابطة تدل على استمرار الضغط البيعي والترند الهابط",
+      "lesson": "RSI المنخفض جداً لا يضمن الانتعاش الفوري إذا كانت الشموع تؤكد استمرار الهبوط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND candle_pattern = bearish",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:53:29.962571",
+      "symbol": "OP/USDT",
+      "won": false,
+      "profit": -0.2401,
+      "rsi": 19.8,
+      "analysis": "خسرت الصفقة رغم RSI منخفض جداً (19.8) لأن السعر واصل انخفاضه فوراً ولم يحدث ارتداد متوقع",
+      "lesson": "RSI المنخفض جداً لا يضمن الارتداد الفوري خاصة في الاتجاهات الهابطة القوية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND no_bounce_confirmation",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:53:35.654211",
+      "symbol": "LINEA/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 25.4,
+      "analysis": "الصفقة خسرت بسبب السوق لم يتحرك مطلقاً رغم RSI منخفض جداً مما يشير لضعف الحجم أو عدم وجود محفز",
+      "lesson": "RSI منخفض جداً قد لا يكفي وحده للدخول في عملات TIER_B التي تحتاج محفزات إضافية للحركة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND tier = TIER_B AND volume_low = true",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:54:35.199246",
+      "symbol": "ALGO/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 0.0,
+      "analysis": "الصفقة خسرت بسبب الدخول في ترند هابط بدون مؤشر RSI صالح (0.0) مما يدل على عدم وجود تأكيد فني كافي",
+      "lesson": "تجنب الدخول في أي صفقة عندما يكون RSI غير متاح أو يظهر قيمة 0.0 لأنه يعني عدم وجود بيانات كافية للتحليل",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI = 0.0 AND candle_pattern = bearish",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 11:57:36.034649",
+      "symbol": "XLM/USDT",
+      "won": false,
+      "profit": -0.2461,
+      "rsi": 23.2,
+      "analysis": "خسرت الصفقة رغم RSI منخفض جداً وشمعة Hammer لأن الخروج كان مبكراً جداً بعد 7 دقائق فقط",
+      "lesson": "الصفقات ذات الـ RSI المنخفض تحتاج وقت أطول للتعافي ولا يجب الخروج بخسارة صغيرة خلال دقائق",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_pattern = Hammer AND hold_time > 15m",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 12:05:26.256678",
+      "symbol": "POLYX/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 28.3,
+      "analysis": "الصفقة خسرت بسبب عدم حدوث أي حركة سعرية على الإطلاق رغم RSI المنخفض والسكور العالي",
+      "lesson": "RSI المنخفض وحده غير كافي إذا لم تكن هناك حركة أو حجم تداول كافي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND price_movement_7m = 0.00% AND volume_low = true",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:11:44.282501",
+      "symbol": "STRK/USDT",
+      "won": false,
+      "profit": -0.1,
+      "rsi": 0.0,
+      "analysis": "الصفقة خسرت بسبب RSI غير صحيح (0.0) مما يشير لمشكلة تقنية أو سوق غير مستقر",
+      "lesson": "تجنب الدخول عندما تكون البيانات التقنية غير صحيحة أو مفقودة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI = 0.0",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:11:50.258841",
+      "symbol": "LINEA/USDT",
+      "won": true,
+      "profit": 0.0672,
+      "rsi": 0.0,
+      "analysis": "الصفقة حققت ربحاً سريعاً بنسبة 0.33% خلال 8 دقائق مع RSI صفر مما يشير لحالة تشبع بيعي قوية",
+      "lesson": "RSI المنخفض جداً (0.0) مع score عالي (95.0) يعطي فرص ربح سريعة حتى لو كانت محدودة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI = 0.0 AND score >= 90 AND tier = TIER_B",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:19:04.691422",
+      "symbol": "POLYX/USDT",
+      "won": false,
+      "profit": -0.4261,
+      "rsi": 26.2,
+      "analysis": "الصفقة خسرت بسبب الدخول في ترند هابط قوي رغم RSI منخفض والخروج القسري عند -0.65%",
+      "lesson": "RSI منخفض لا يكفي للشراء عندما تكون الشموع هابطة بقوة",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_pattern = bearish",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:20:38.951342",
+      "symbol": "WIF/USDT",
+      "won": false,
+      "profit": -0.3809,
+      "rsi": 0.0,
+      "analysis": "الصفقة خسرت بسبب RSI عند 0.0 مما يشير لحالة تشبع بيعي مفرط وضغط قوي على السعر",
+      "lesson": "تجنب الدخول عند RSI صفر حتى لو كان السكور عالي لأنه يشير لضغط بيعي استثنائي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI <= 5.0 AND score >= 90",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:23:47.887822",
+      "symbol": "LINEA/USDT",
+      "won": false,
+      "profit": -0.2667,
+      "rsi": 30.7,
+      "analysis": "خسرت الصفقة بسبب دخول مبكر عند مستوى RSI 30.7 في منطقة تشبع بيعي لم تكتمل بعد",
+      "lesson": "انتظار RSI ينخفض أكثر تحت 25 أو تأكيد انعكاس بإشارات إضافية قبل الدخول في صفقات TIER_B",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI > 28 AND tier = TIER_B AND candle_type = normal",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:45:33.027469",
+      "symbol": "DOGE/USDT",
+      "won": false,
+      "profit": -0.1433,
+      "rsi": 16.7,
+      "analysis": "خسرت الصفقة بسبب الدخول في منطقة تشبع بيعي مفرط مع RSI 16.7 لكن السوق استمر في الانخفاض دون انتعاش فوري",
+      "lesson": "المناطق المتشبعة بيعياً قد تحتاج وقت أطول للانتعاش خاصة مع العملات عالية التقلب مثل DOGE",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 20 AND duration < 15m AND coin = DOGE",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 12:46:42.117814",
+      "symbol": "1MBABYDOGE/USDT",
+      "won": false,
+      "profit": -0.0872,
+      "rsi": 18.4,
+      "analysis": "خسرت الصفقة رغم RSI المنخفض جداً لأن العملة من الفئة المنخفضة TIER_C والاتجاه هابط مما منع الارتداد المتوقع",
+      "lesson": "عملات TIER_C تحتاج تأكيدات إضافية حتى مع RSI منخفض جداً والاتجاه الهابط يقلل فرص النجاح",
+      "rule": {
+        "type": "AVOID",
+        "condition": "tier = TIER_C AND candle_trend = bearish AND RSI < 25",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 13:18:54.742701",
+      "symbol": "KITE/USDT",
+      "won": false,
+      "profit": -0.3592,
+      "rsi": 29.4,
+      "analysis": "خسرت الصفقة لأن السوق واصل الهبوط رغم مستوى RSI المنخفض والدخول فوراً في منطقة الإيقاف",
+      "lesson": "RSI المنخفض وحده غير كافي للدخول بل يجب انتظار إشارات تأكيد إضافية",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND max_profit = 0% AND hit_SL_immediately = true",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 13:46:25.640791",
+      "symbol": "BANANAS31/USDT",
+      "won": false,
+      "profit": -0.0712,
+      "rsi": 33.9,
+      "analysis": "الصفقة خسرت رغم RSI منخفض مناسب للشراء لأن العملة لم تجد دعم كافي واستمرت في الهبوط حتى خروج البريك إيفن",
+      "lesson": "RSI منخفض وحده غير كافي للدخول، يجب التأكد من وجود إشارات دعم إضافية قبل الشراء",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND max_profit < 0.1% AND candle_type = normal",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 14:05:20.293631",
+      "symbol": "1000CHEEMS/USDT",
+      "won": true,
+      "profit": 0.2464,
+      "rsi": 25.1,
+      "analysis": "الصفقة ربحت لأن RSI المنخفض جداً (25.1) مع نموذج Hammer أشار لانعكاس صاعد قوي",
+      "lesson": "RSI أقل من 30 مع نماذج الانعكاس الصاعدة يعطي إشارات دخول موثوقة للصفقات قصيرة المدى",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND candle_pattern = Hammer",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 15:01:50.201314",
+      "symbol": "THE/USDT",
+      "won": true,
+      "profit": 0.207,
+      "rsi": 23.9,
+      "analysis": "الصفقة ربحت بسبب الدخول عند RSI منخفض جداً (23.9) مع نموذج Hammer الذي يشير لانعكاس صعودي من مستوى دعم قوي",
+      "lesson": "RSI أقل من 25 مع نموذج Hammer يعطي إشارة شراء قوية للانعكاس السريع",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_pattern = Hammer AND tier = TIER_A",
+        "confidence": 0.9
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:06:24.648405",
+      "symbol": "DIA/USDT",
+      "won": true,
+      "profit": 0.0176,
+      "rsi": 24.0,
+      "analysis": "ربحت الصفقة بسبب الدخول عند مستوى RSI منخفض جداً (24) مع وجود نموذج Hammer مما أشار لانعكاس صاعد قوي",
+      "lesson": "مستويات RSI المنخفضة جداً مع أنماط الانعكاس الكلاسيكية تعطي إشارات دخول موثوقة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_pattern = Hammer AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:06:30.645883",
+      "symbol": "THE/USDT",
+      "won": true,
+      "profit": 0.3367,
+      "rsi": 28.7,
+      "analysis": "الصفقة ربحت بسبب الدخول عند مستوى RSI منخفض جداً (28.7) مع تشكيل شمعة Hammer مما أشار لانعكاس صاعد قوي",
+      "lesson": "الدخول عند مستويات RSI أقل من 30 مع تأكيد من أنماط الشموع اليابانية يحقق نتائج إيجابية سريعة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 30 AND candle_pattern = Hammer AND tier = TIER_A",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:43:19.477247",
+      "symbol": "ZK/USDT",
+      "won": false,
+      "profit": -0.1283,
+      "rsi": 21.7,
+      "analysis": "الصفقة فشلت رغم RSI المنخفض لأن الشمعة الهابطة أشارت لاستمرار الاتجاه الهبوطي",
+      "lesson": "RSI منخفض وحده غير كافي إذا كان السعر في اتجاه هبوطي قوي",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND candle_pattern = bearish",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:46:09.498294",
+      "symbol": "HYPER/USDT",
+      "won": false,
+      "profit": -0.3938,
+      "rsi": 24.6,
+      "analysis": "خسرت الصفقة رغم RSI المنخفض (24.6) لأن الاتجاه الهابط كان قوياً جداً ولم يحدث ارتداد",
+      "lesson": "RSI المنخفض وحده لا يكفي إذا كان الاتجاه الهابط قوياً والشموع تؤكد استمرار الهبوط",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 30 AND candle_pattern = bearish AND no_bullish_divergence",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:49:36.299229",
+      "symbol": "BANANAS31/USDT",
+      "won": false,
+      "profit": -0.4034,
+      "rsi": 22.3,
+      "analysis": "الصفقة خسرت بسبب الدخول في مستوى RSI منخفض جداً (22.3) مع عدم وجود إشارات قوة إضافية لدعم الانعكاس",
+      "lesson": "المستويات المنخفضة جداً من RSI تتطلب تأكيدات إضافية قبل الدخول لتجنب السقوط المستمر",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 25 AND max_profit = 0.00%",
+        "confidence": 0.75
+      },
+      "rsi_verdict": "BAD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 15:55:24.383970",
+      "symbol": "ZK/USDT",
+      "won": false,
+      "profit": -0.0149,
+      "rsi": 31.9,
+      "analysis": "خسرت الصفقة رغم RSI منخفض وشمعة صاعدة بسبب ضعف الزخم والخروج السريع بوقف الخسارة",
+      "lesson": "RSI المنخفض وحده غير كافي إذا لم يكن هناك زخم قوي للاختراق",
+      "rule": {
+        "type": "AVOID",
+        "condition": "RSI < 35 AND candle_pattern = bullish AND duration < 10min",
+        "confidence": 0.7
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "TOO_EARLY",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 16:02:47.164764",
+      "symbol": "HEMI/USDT",
+      "won": true,
+      "profit": 0.3125,
+      "rsi": 20.9,
+      "analysis": "الصفقة ربحت بسبب RSI المنخفض جداً (20.9) الذي أشار لحالة تشبع بيعي قوية مما أدى لارتداد سريع",
+      "lesson": "RSI أقل من 25 مع شموع هابطة يمكن أن يعطي إشارة شراء قوية للارتداد السريع",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND candle_pattern = bearish AND score > 100",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 16:03:37.058458",
+      "symbol": "SOLV/USDT",
+      "won": true,
+      "profit": 0.0587,
+      "rsi": 21.0,
+      "analysis": "ربحت الصفقة بسبب الدخول عند RSI منخفض جداً (21) مما يشير إلى تشبع بيعي قوي وانتعاش سريع",
+      "lesson": "المناطق المتشبعة بيعياً بقوة (RSI < 25) توفر فرص دخول ممتازة للانتعاش السريع",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 25 AND score > 100",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    },
+    {
+      "time": "2026-03-30 16:08:40.540286",
+      "symbol": "OGN/USDT",
+      "won": false,
+      "profit": -0.1472,
+      "rsi": 17.9,
+      "analysis": "الصفقة خسرت بسبب الخروج المبكر جداً عند -0.09% رغم أن RSI كان في منطقة تشبع بيعي قوية ووجود نموذج Hammer إيجابي",
+      "lesson": "النماذج الإيجابية مع RSI منخفض جداً تحتاج صبر أكثر لتحقيق الأرباح المتوقعة",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 20 AND hammer_pattern = true",
+        "confidence": 0.8
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "SHOULD_HOLD"
+    },
+    {
+      "time": "2026-03-30 16:13:04.333697",
+      "symbol": "D/USDT",
+      "won": true,
+      "profit": 0.3071,
+      "rsi": 33.8,
+      "analysis": "ربحت بسبب الدخول في منطقة تشبع بيعي قوية مع RSI 33.8 وتحقيق الهدف بسرعة",
+      "lesson": "الدخول في مناطق التشبع البيعي مع RSI أقل من 35 يحقق أرباح سريعة في العملات من الفئة B",
+      "rule": {
+        "type": "PREFER",
+        "condition": "RSI < 35 AND tier = TIER_B",
+        "confidence": 0.85
+      },
+      "rsi_verdict": "GOOD",
+      "timing_verdict": "GOOD",
+      "exit_verdict": "GOOD"
+    }
+  ],
+  "rules": [
+    {
+      "added": "2026-03-29 22:24:38.790129",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND no_bounce_confirmation AND tier_a_coin",
+      "confidence": 0.7,
+      "from_trade": "ZBT/USDT"
+    },
+    {
+      "added": "2026-03-29 22:54:00.245418",
+      "type": "PREFER",
+      "condition": "RSI < 32 AND tier = TIER_A AND candle_pattern = bearish",
+      "confidence": 0.8,
+      "from_trade": "C/USDT"
+    },
+    {
+      "added": "2026-03-29 23:13:03.645964",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 100",
+      "confidence": 0.85,
+      "from_trade": "OGN/USDT"
+    },
+    {
+      "added": "2026-03-29 23:16:47.332247",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_type = عادية AND tier = TIER_A",
+      "confidence": 0.7,
+      "from_trade": "LA/USDT"
+    },
+    {
+      "added": "2026-03-29 23:17:24.691669",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 85 AND tier = TIER_B",
+      "confidence": 0.85,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-29 23:21:18.117068",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND candle_pattern = Hammer AND max_profit = 0%",
+      "confidence": 0.7,
+      "from_trade": "SENT/USDT"
+    },
+    {
+      "added": "2026-03-29 23:25:22.765125",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND tier = TIER_B AND score > 90",
+      "confidence": 0.85,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-30 00:09:41.905603",
+      "type": "AVOID",
+      "condition": "RSI < 15 AND candle_trend = bearish",
+      "confidence": 0.75,
+      "from_trade": "ZBT/USDT"
+    },
+    {
+      "added": "2026-03-30 00:11:17.769855",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND candles = bearish",
+      "confidence": 0.75,
+      "from_trade": "OPN/USDT"
+    },
+    {
+      "added": "2026-03-30 00:32:01.330492",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND duration = 0 minutes",
+      "confidence": 0.8,
+      "from_trade": "C/USDT"
+    },
+    {
+      "added": "2026-03-30 00:39:53.225196",
+      "type": "AVOID",
+      "condition": "tier = TIER_B AND RSI < 32",
+      "confidence": 0.75,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-30 00:41:42.045372",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND trail_stop > 0.5%",
+      "confidence": 0.8,
+      "from_trade": "C/USDT"
+    },
+    {
+      "added": "2026-03-30 00:46:00.541603",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND candle_pattern = bearish",
+      "confidence": 0.7,
+      "from_trade": "LA/USDT"
+    },
+    {
+      "added": "2026-03-30 00:46:59.782621",
+      "type": "PREFER",
+      "condition": "RSI < 20 AND Score > 90",
+      "confidence": 0.85,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-30 00:50:25.093535",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND tier = TIER_A",
+      "confidence": 0.7,
+      "from_trade": "CFG/USDT"
+    },
+    {
+      "added": "2026-03-30 00:54:53.490894",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 95 AND tier = TIER_A",
+      "confidence": 0.9,
+      "from_trade": "STO/USDT"
+    },
+    {
+      "added": "2026-03-30 01:14:18.921578",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND max_profit < 0.1% AND reach_loss > -0.4%",
+      "confidence": 0.75,
+      "from_trade": "BANANAS31/USDT"
+    },
+    {
+      "added": "2026-03-30 01:15:08.269574",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND max_profit > 0.30% AND stop_loss > -0.20%",
+      "confidence": 0.7,
+      "from_trade": "STO/USDT"
+    },
+    {
+      "added": "2026-03-30 01:37:01.480928",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND no_reversal_confirmation",
+      "confidence": 0.7,
+      "from_trade": "OPN/USDT"
+    },
+    {
+      "added": "2026-03-30 01:45:02.618498",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_trend = bearish AND tier = TIER_B",
+      "confidence": 0.75,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-30 01:45:44.936354",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 90 AND tier = TIER_A",
+      "confidence": 0.8,
+      "from_trade": "LA/USDT"
+    },
+    {
+      "added": "2026-03-30 01:46:09.200573",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_trend = bearish",
+      "confidence": 0.7,
+      "from_trade": "CATI/USDT"
+    },
+    {
+      "added": "2026-03-30 01:55:45.686639",
+      "type": "AVOID",
+      "condition": "RSI > 22 AND RSI < 30 AND tier = TIER_A",
+      "confidence": 0.7,
+      "from_trade": "SENT/USDT"
+    },
+    {
+      "added": "2026-03-30 02:01:07.146776",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_pattern = Hammer AND volume_confirmation = false",
+      "confidence": 0.7,
+      "from_trade": "CATI/USDT"
+    },
+    {
+      "added": "2026-03-30 02:07:06.444255",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND tier = TIER_B AND candle_type = normal",
+      "confidence": 0.85,
+      "from_trade": "SOPH/USDT"
+    },
+    {
+      "added": "2026-03-30 02:08:38.031754",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND candle_pattern = bearish AND duration < 10min",
+      "confidence": 0.75,
+      "from_trade": "LA/USDT"
+    },
+    {
+      "added": "2026-03-30 02:12:31.755956",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND candle_pattern = Hammer AND max_profit = 0",
+      "confidence": 0.7,
+      "from_trade": "ZBT/USDT"
+    },
+    {
+      "added": "2026-03-30 02:19:28.002620",
+      "type": "PREFER",
+      "condition": "candle_pattern = bullish AND tier = TIER_B AND quick_tp_available",
+      "confidence": 0.7,
+      "from_trade": "FIO/USDT"
+    },
+    {
+      "added": "2026-03-30 02:47:10.809531",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND candles = bearish AND no_immediate_profit",
+      "confidence": 0.8,
+      "from_trade": "CHZ/USDT"
+    },
+    {
+      "added": "2026-03-30 03:07:48.488215",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 95 AND tier = TIER_A",
+      "confidence": 0.9,
+      "from_trade": "ONT/USDT"
+    },
+    {
+      "added": "2026-03-30 03:36:04.349705",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND candle_pattern = bullish AND trail_stop > 0.5%",
+      "confidence": 0.7,
+      "from_trade": "D/USDT"
+    },
+    {
+      "added": "2026-03-30 03:45:50.792514",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_pattern = bearish",
+      "confidence": 0.85,
+      "from_trade": "D/USDT"
+    },
+    {
+      "added": "2026-03-30 03:55:00.142096",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND score > 90 AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "SIGN/USDT"
+    },
+    {
+      "added": "2026-03-30 04:18:26.567675",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 90 AND tier = B",
+      "confidence": 0.85,
+      "from_trade": "NOM/USDT"
+    },
+    {
+      "added": "2026-03-30 04:21:42.089873",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND duration = 0 minutes AND tier = TIER_A",
+      "confidence": 0.75,
+      "from_trade": "DYDX/USDT"
+    },
+    {
+      "added": "2026-03-30 04:31:10.719555",
+      "type": "PREFER",
+      "condition": "profit_reached > 0.4% AND duration < 5min",
+      "confidence": 0.7,
+      "from_trade": "USUAL/USDT"
+    },
+    {
+      "added": "2026-03-30 04:31:35.035549",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND candle_pattern = Hammer AND tier = TIER_A",
+      "confidence": 0.8,
+      "from_trade": "RESOLV/USDT"
+    },
+    {
+      "added": "2026-03-30 04:34:39.408635",
+      "type": "AVOID",
+      "condition": "trail_stop <= 0.30% AND rsi_entry < 30",
+      "confidence": 0.8,
+      "from_trade": "币安人生/USDT"
+    },
+    {
+      "added": "2026-03-30 04:35:03.607414",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND tier = TIER_A AND candle_pattern = bullish",
+      "confidence": 0.8,
+      "from_trade": "DYDX/USDT"
+    },
+    {
+      "added": "2026-03-30 04:38:44.966458",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND candle_pattern = bullish AND tier = TIER_A",
+      "confidence": 0.9,
+      "from_trade": "RESOLV/USDT"
+    },
+    {
+      "added": "2026-03-30 04:48:29.898971",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 90 AND tier = TIER_B",
+      "confidence": 0.8,
+      "from_trade": "NOM/USDT"
+    },
+    {
+      "added": "2026-03-30 05:01:03.511135",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND no_reversal_confirmation",
+      "confidence": 0.7,
+      "from_trade": "SIGN/USDT"
+    },
+    {
+      "added": "2026-03-30 05:02:10.063522",
+      "type": "AVOID",
+      "condition": "tier = TIER_B AND exit_duration = 0 minutes",
+      "confidence": 0.7,
+      "from_trade": "NOM/USDT"
+    },
+    {
+      "added": "2026-03-30 05:05:05.005877",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 100",
+      "confidence": 0.75,
+      "from_trade": "DYDX/USDT"
+    },
+    {
+      "added": "2026-03-30 05:09:20.116407",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND score > 100 AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "ENJ/USDT"
+    },
+    {
+      "added": "2026-03-30 05:22:51.055207",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND score > 100",
+      "confidence": 0.7,
+      "from_trade": "币安人生/USDT"
+    },
+    {
+      "added": "2026-03-30 05:58:21.515117",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND candles = bearish",
+      "confidence": 0.8,
+      "from_trade": "D/USDT"
+    },
+    {
+      "added": "2026-03-30 06:33:40.378796",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND score > 100 AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "ENJ/USDT"
+    },
+    {
+      "added": "2026-03-30 06:39:06.203452",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_pattern = bearish",
+      "confidence": 0.7,
+      "from_trade": "DYDX/USDT"
+    },
+    {
+      "added": "2026-03-30 06:40:02.633923",
+      "type": "AVOID",
+      "condition": "exit_time < 10m AND max_profit < 0.1% AND RSI < 35",
+      "confidence": 0.7,
+      "from_trade": "OGN/USDT"
+    },
+    {
+      "added": "2026-03-30 06:56:25.964422",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND candle_pattern = bearish AND tier = A",
+      "confidence": 0.85,
+      "from_trade": "ONT/USDT"
+    },
+    {
+      "added": "2026-03-30 07:01:43.242227",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND candle_pattern = bearish AND no_reversal_signals",
+      "confidence": 0.7,
+      "from_trade": "ONG/USDT"
+    },
+    {
+      "added": "2026-03-30 07:15:55.095581",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_trend = bearish",
+      "confidence": 0.7,
+      "from_trade": "ENJ/USDT"
+    },
+    {
+      "added": "2026-03-30 07:23:48.643407",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND score > 100 AND timeframe = 3min",
+      "confidence": 0.7,
+      "from_trade": "ONT/USDT"
+    },
+    {
+      "added": "2026-03-30 07:32:23.204376",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND candle_pattern = bearish",
+      "confidence": 0.75,
+      "from_trade": "币安人生/USDT"
+    },
+    {
+      "added": "2026-03-30 07:56:36.917199",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND max_drawdown_immediate > -0.40%",
+      "confidence": 0.7,
+      "from_trade": "ONG/USDT"
+    },
+    {
+      "added": "2026-03-30 08:17:24.772133",
+      "type": "AVOID",
+      "condition": "RSI < 27 AND score = 100 AND candle_type = normal",
+      "confidence": 0.7,
+      "from_trade": "币安人生/USDT"
+    },
+    {
+      "added": "2026-03-30 08:34:55.289283",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND tier = TIER_B",
+      "confidence": 0.75,
+      "from_trade": "FIO/USDT"
+    },
+    {
+      "added": "2026-03-30 09:37:15.713685",
+      "type": "AVOID",
+      "condition": "tier = TIER_B AND max_profit = 0% AND max_loss = 0%",
+      "confidence": 0.8,
+      "from_trade": "FIO/USDT"
+    },
+    {
+      "added": "2026-03-30 09:48:26.266692",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND candle_pattern = Hammer AND tier = A",
+      "confidence": 0.7,
+      "from_trade": "ENJ/USDT"
+    },
+    {
+      "added": "2026-03-30 10:48:52.872672",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND Score > 100 AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "ARKM/USDT"
+    },
+    {
+      "added": "2026-03-30 10:57:41.598955",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND score > 85 AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "USUAL/USDT"
+    },
+    {
+      "added": "2026-03-30 11:05:48.402188",
+      "type": "AVOID",
+      "condition": "RSI < 10 AND tier = TIER_B AND no_bullish_confirmation",
+      "confidence": 0.7,
+      "from_trade": "ALT/USDT"
+    },
+    {
+      "added": "2026-03-30 11:07:35.275888",
+      "type": "PREFER",
+      "condition": "TIER = TIER_A AND Score > 100",
+      "confidence": 0.8,
+      "from_trade": "ARKM/USDT"
+    },
+    {
+      "added": "2026-03-30 11:08:43.891999",
+      "type": "AVOID",
+      "condition": "RSI < 15 AND candle_pattern = bearish",
+      "confidence": 0.7,
+      "from_trade": "WIF/USDT"
+    },
+    {
+      "added": "2026-03-30 11:08:48.701273",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND current_candle = bearish",
+      "confidence": 0.75,
+      "from_trade": "USUAL/USDT"
+    },
+    {
+      "added": "2026-03-30 11:16:16.664195",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_pattern = 'هابطة'",
+      "confidence": 0.8,
+      "from_trade": "CHZ/USDT"
+    },
+    {
+      "added": "2026-03-30 11:20:32.695702",
+      "type": "AVOID",
+      "condition": "tier = TIER_C AND RSI > 22 AND max_profit = 0%",
+      "confidence": 0.75,
+      "from_trade": "BOME/USDT"
+    },
+    {
+      "added": "2026-03-30 11:20:38.252152",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND candles_trend = bearish",
+      "confidence": 0.7,
+      "from_trade": "ZK/USDT"
+    },
+    {
+      "added": "2026-03-30 11:22:45.483254",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND شموع عادية",
+      "confidence": 0.7,
+      "from_trade": "XPL/USDT"
+    },
+    {
+      "added": "2026-03-30 11:25:14.900297",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND tier = TIER_B AND candle_type = عادية",
+      "confidence": 0.7,
+      "from_trade": "ALT/USDT"
+    },
+    {
+      "added": "2026-03-30 11:26:29.483025",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND candle_trend = bearish",
+      "confidence": 0.8,
+      "from_trade": "HYPER/USDT"
+    },
+    {
+      "added": "2026-03-30 11:31:47.459929",
+      "type": "AVOID",
+      "condition": "RSI <= 5 AND candle_pattern = bearish",
+      "confidence": 0.8,
+      "from_trade": "STRK/USDT"
+    },
+    {
+      "added": "2026-03-30 11:35:16.391772",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND no_reversal_signals",
+      "confidence": 0.7,
+      "from_trade": "XPL/USDT"
+    },
+    {
+      "added": "2026-03-30 11:35:53.216303",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND candle_trend = bearish AND tier = TIER_A",
+      "confidence": 0.7,
+      "from_trade": "KITE/USDT"
+    },
+    {
+      "added": "2026-03-30 11:44:40.534662",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND candle_pattern = bearish",
+      "confidence": 0.75,
+      "from_trade": "ARKM/USDT"
+    },
+    {
+      "added": "2026-03-30 11:53:29.962607",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND no_bounce_confirmation",
+      "confidence": 0.7,
+      "from_trade": "OP/USDT"
+    },
+    {
+      "added": "2026-03-30 11:53:35.654243",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND tier = TIER_B AND volume_low = true",
+      "confidence": 0.7,
+      "from_trade": "LINEA/USDT"
+    },
+    {
+      "added": "2026-03-30 11:54:35.199280",
+      "type": "AVOID",
+      "condition": "RSI = 0.0 AND candle_pattern = bearish",
+      "confidence": 0.9,
+      "from_trade": "ALGO/USDT"
+    },
+    {
+      "added": "2026-03-30 11:57:36.034702",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_pattern = Hammer AND hold_time > 15m",
+      "confidence": 0.75,
+      "from_trade": "XLM/USDT"
+    },
+    {
+      "added": "2026-03-30 12:05:26.256738",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND price_movement_7m = 0.00% AND volume_low = true",
+      "confidence": 0.7,
+      "from_trade": "POLYX/USDT"
+    },
+    {
+      "added": "2026-03-30 12:11:44.282562",
+      "type": "AVOID",
+      "condition": "RSI = 0.0",
+      "confidence": 0.9,
+      "from_trade": "STRK/USDT"
+    },
+    {
+      "added": "2026-03-30 12:11:50.258877",
+      "type": "PREFER",
+      "condition": "RSI = 0.0 AND score >= 90 AND tier = TIER_B",
+      "confidence": 0.7,
+      "from_trade": "LINEA/USDT"
+    },
+    {
+      "added": "2026-03-30 12:19:04.691547",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_pattern = bearish",
+      "confidence": 0.8,
+      "from_trade": "POLYX/USDT"
+    },
+    {
+      "added": "2026-03-30 12:20:38.951370",
+      "type": "AVOID",
+      "condition": "RSI <= 5.0 AND score >= 90",
+      "confidence": 0.85,
+      "from_trade": "WIF/USDT"
+    },
+    {
+      "added": "2026-03-30 12:23:47.887850",
+      "type": "AVOID",
+      "condition": "RSI > 28 AND tier = TIER_B AND candle_type = normal",
+      "confidence": 0.7,
+      "from_trade": "LINEA/USDT"
+    },
+    {
+      "added": "2026-03-30 12:45:33.027574",
+      "type": "AVOID",
+      "condition": "RSI < 20 AND duration < 15m AND coin = DOGE",
+      "confidence": 0.7,
+      "from_trade": "DOGE/USDT"
+    },
+    {
+      "added": "2026-03-30 12:46:42.117856",
+      "type": "AVOID",
+      "condition": "tier = TIER_C AND candle_trend = bearish AND RSI < 25",
+      "confidence": 0.75,
+      "from_trade": "1MBABYDOGE/USDT"
+    },
+    {
+      "added": "2026-03-30 13:18:54.742766",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND max_profit = 0% AND hit_SL_immediately = true",
+      "confidence": 0.8,
+      "from_trade": "KITE/USDT"
+    },
+    {
+      "added": "2026-03-30 13:46:25.640858",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND max_profit < 0.1% AND candle_type = normal",
+      "confidence": 0.7,
+      "from_trade": "BANANAS31/USDT"
+    },
+    {
+      "added": "2026-03-30 14:05:20.293659",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND candle_pattern = Hammer",
+      "confidence": 0.85,
+      "from_trade": "1000CHEEMS/USDT"
+    },
+    {
+      "added": "2026-03-30 15:01:50.201380",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_pattern = Hammer AND tier = TIER_A",
+      "confidence": 0.9,
+      "from_trade": "THE/USDT"
+    },
+    {
+      "added": "2026-03-30 15:06:24.648497",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_pattern = Hammer AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "DIA/USDT"
+    },
+    {
+      "added": "2026-03-30 15:06:30.645911",
+      "type": "PREFER",
+      "condition": "RSI < 30 AND candle_pattern = Hammer AND tier = TIER_A",
+      "confidence": 0.85,
+      "from_trade": "THE/USDT"
+    },
+    {
+      "added": "2026-03-30 15:43:19.477281",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND candle_pattern = bearish",
+      "confidence": 0.7,
+      "from_trade": "ZK/USDT"
+    },
+    {
+      "added": "2026-03-30 15:46:09.498329",
+      "type": "AVOID",
+      "condition": "RSI < 30 AND candle_pattern = bearish AND no_bullish_divergence",
+      "confidence": 0.7,
+      "from_trade": "HYPER/USDT"
+    },
+    {
+      "added": "2026-03-30 15:49:36.299268",
+      "type": "AVOID",
+      "condition": "RSI < 25 AND max_profit = 0.00%",
+      "confidence": 0.75,
+      "from_trade": "BANANAS31/USDT"
+    },
+    {
+      "added": "2026-03-30 15:55:24.384030",
+      "type": "AVOID",
+      "condition": "RSI < 35 AND candle_pattern = bullish AND duration < 10min",
+      "confidence": 0.7,
+      "from_trade": "ZK/USDT"
+    },
+    {
+      "added": "2026-03-30 16:02:47.164804",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND candle_pattern = bearish AND score > 100",
+      "confidence": 0.85,
+      "from_trade": "HEMI/USDT"
+    },
+    {
+      "added": "2026-03-30 16:03:37.058502",
+      "type": "PREFER",
+      "condition": "RSI < 25 AND score > 100",
+      "confidence": 0.85,
+      "from_trade": "SOLV/USDT"
+    },
+    {
+      "added": "2026-03-30 16:08:40.540318",
+      "type": "PREFER",
+      "condition": "RSI < 20 AND hammer_pattern = true",
+      "confidence": 0.8,
+      "from_trade": "OGN/USDT"
+    },
+    {
+      "added": "2026-03-30 16:13:04.333724",
+      "type": "PREFER",
+      "condition": "RSI < 35 AND tier = TIER_B",
+      "confidence": 0.85,
+      "from_trade": "D/USDT"
+    }
+  ],
+  "stats": {
+    "analyzed": 103,
+    "total_saved": 102
+  }
+}

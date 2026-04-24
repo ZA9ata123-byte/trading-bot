@@ -1,0 +1,30 @@
+{
+  "entry": {
+    "rsi_min": 30,
+    "rsi_max": 45,
+    "prefer_coins": [
+      "DOLO/USDT",
+      "VIC/USDT",
+      "MITO/USDT",
+      "BB/USDT",
+      "PORTAL/USDT"
+    ],
+    "avoid_coins": [
+      "ARB/USDT",
+      "DYM/USDT",
+      "ONT/USDT",
+      "PIXEL/USDT",
+      "JST/USDT",
+      "RARE/USDT"
+    ]
+  },
+  "exit": {
+    "tp_pct": 0.008,
+    "sl_pct": 0.002,
+    "rsi_exit_level": 65,
+    "rsi_exit_min_gain": 0.003,
+    "trail_activation": 0.006,
+    "trail_distance": 0.004,
+    "max_hold_minutes": 8
+  }
+}

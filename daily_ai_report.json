@@ -1,0 +1,34 @@
+{
+  "last_analysis": "2026-04-10",
+  "last_result": {
+    "analysis": "معدل نجاح منخفض جداً 32% مع خسائر كبيرة من Stop Loss (63 صفقة خاسرة من أصل 63). جميع العملات المتداولة حققت خسائر مما يشير لمشكلة في التوقيت أو اختيار العملات.",
+    "verdict": "BAD",
+    "param_adjustments": {
+      "tp_pct": null,
+      "sl_pct": -0.2,
+      "trail_distance": 0.1,
+      "max_hold_min": null,
+      "force_exit_pct": null
+    },
+    "avoid_symbols": [
+      "ARB/USDT",
+      "ONT/USDT",
+      "DYM/USDT",
+      "BARD/USDT",
+      "EUL/USDT"
+    ],
+    "prefer_symbols": [],
+    "new_rules": [
+      {
+        "type": "AVOID",
+        "condition": "تجنب العملات التي حققت 0% معدل نجاح في آخر جلسة",
+        "confidence": 0.9
+      },
+      {
+        "type": "AVOID",
+        "condition": "تقليل حجم التداول عند تحقيق أكثر من 10 خسائر متتالية بـ SL",
+        "confidence": 0.8
+      }
+    ]
+  }
+}

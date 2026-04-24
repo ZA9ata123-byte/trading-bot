@@ -1,0 +1,412 @@
+"""
+guardian_v4.py - الحارس v4
+ينفذ signals من Hunter، يتابع الصفقات، ويسدها بـTP/SL/Trailing
+"""
+import ccxt
+import json
+import time
+import logging
+import os
+import requests
+import pandas as pd
+from datetime import datetime
+from config_v4 import *
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [GUARD] %(message)s',
+    handlers=[
+        logging.FileHandler('/root/micro-scalping/guardian_v4.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+log = logging.getLogger('guardian')
+
+BASE = '/root/micro-scalping'
+SIGNALS_FILE = os.path.join(BASE, 'signals.json')
+OPEN_TRADES_FILE = os.path.join(BASE, 'open_trades.json')
+MEMORY_FILE = os.path.join(BASE, 'trade_memory.json')
+PERFORMANCE_FILE = os.path.join(BASE, 'performance.json')
+
+
+def load_json(path, default=None):
+    try:
+        with open(path, 'r') as f:
+            return json.load(f)
+    except:
+        return default if default is not None else {}
+
+
+def save_json(path, data):
+    try:
+        with open(path, 'w') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2, default=str)
+    except Exception as e:
+        log.error(f"Save error: {e}")
+
+
+def send_tg(text, channel=None):
+    ch = channel or TELEGRAM_CHANNEL_AR
+    try:
+        requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+            json={"chat_id": ch, "text": text, "parse_mode": "HTML"},
+            timeout=10
+        )
+    except:
+        pass
+
+
+def connect():
+    ex = ccxt.binance({
+        'apiKey': BINANCE_API_KEY,
+        'secret': BINANCE_API_SECRET,
+        'enableRateLimit': True,
+        'options': {
+            'defaultType': 'spot',
+            'recvWindow': 60000,
+            'adjustForTimeDifference': True
+        }
+    })
+    ex.load_time_difference()
+    return ex
+
+
+def process_pending_signal(exchange):
+    """نفذ signal من Hunter"""
+    signals = load_json(SIGNALS_FILE, {"pending": [], "history": []})
+    open_trades = load_json(OPEN_TRADES_FILE, [])
+    
+    if len(open_trades) >= MAX_TRADES:
+        return
+    
+    pending = signals.get("pending", [])
+    if not pending:
+        return
+    
+    sig = pending.pop(0)
+    symbol = sig['symbol']
+    
+    # skip إلا مفتوحة
+    if any(t.get('symbol') == symbol for t in open_trades):
+        save_json(SIGNALS_FILE, signals)
+        return
+    
+    # جيب السعر الحالي
+    try:
+        ticker = exchange.fetch_ticker(symbol)
+        current_price = float(ticker['last'])
+    except Exception as e:
+        log.error(f"Cannot fetch price for {symbol}: {e}")
+        save_json(SIGNALS_FILE, signals)
+        return
+    
+    # تحقق أن السعر ماتحركش بزاف من signal time
+    signal_price = float(sig.get('price', current_price))
+    price_drift = abs(current_price - signal_price) / signal_price
+    if price_drift > 0.005:  # 0.5% drift = late
+        log.info(f"Signal stale for {symbol}: drift {price_drift*100:.2f}%, skipping")
+        sig['status'] = 'STALE'
+        signals.setdefault('history', []).append(sig)
+        save_json(SIGNALS_FILE, signals)
+        return
+    
+    # افتح الصفقة
+    trade = {
+        "symbol": symbol,
+        "entry_price": current_price,
+        "stop_loss": round(current_price * (1 - SL_PCT), 10),
+        "take_profit": round(current_price * (1 + TP_PCT), 10),
+        "highest": current_price,
+        "lowest": current_price,
+        "capital": TRADE_AMOUNT,
+        "open_time": str(datetime.now()),
+        "rsi_15m": sig.get('rsi_15m', 0),
+        "rsi_1m": sig.get('rsi_1m', 0),
+        "score": sig.get('score', 0),
+        "trailing_activated": False,
+        "status": "ACTIVE"
+    }
+    
+    open_trades.append(trade)
+    save_json(OPEN_TRADES_FILE, open_trades)
+    
+    # move signal to history
+    sig['status'] = 'EXECUTED'
+    signals.setdefault('history', []).append(sig)
+    signals["history"] = signals["history"][-50:]
+    save_json(SIGNALS_FILE, signals)
+    
+    log.info(f"OPENED {symbol} @ ${current_price:.6f} | TP:${trade['take_profit']:.6f} SL:${trade['stop_loss']:.6f}")
+
+
+def close_trade(trade, exit_price, reason, open_trades):
+    """سد الصفقة + حط فـmemory + telegram"""
+    entry = float(trade['entry_price'])
+    pnl_pct = (exit_price - entry) / entry
+    
+    # fees حقيقيين
+    fees_pct = 0.002  # 0.2% total
+    gross_profit = TRADE_AMOUNT * pnl_pct
+    fees_cost = TRADE_AMOUNT * fees_pct
+    net_profit = round(gross_profit - fees_cost, 4)
+    
+    won = net_profit > 0
+    
+    # مدة
+    try:
+        open_time = datetime.fromisoformat(str(trade['open_time']).replace(' ', 'T').split('.')[0])
+        duration_min = round((datetime.now() - open_time).total_seconds() / 60, 1)
+    except:
+        duration_min = 0
+    
+    # log
+    emoji = "✅" if won else "❌"
+    log.info(
+        f"{emoji} CLOSE {trade['symbol']} @ ${exit_price:.6f} | "
+        f"PnL:{pnl_pct*100:+.2f}% | Net:${net_profit:+.4f} | "
+        f"{duration_min}m | {reason}"
+    )
+    
+    # اكتب فـmemory
+    memory = load_json(MEMORY_FILE, {"trades": []})
+    record = {
+        "symbol": trade['symbol'],
+        "won": won,
+        "profit": net_profit,
+        "pnl_pct": round(pnl_pct * 100, 2),
+        "entry_price": entry,
+        "exit_price": exit_price,
+        "rsi_15m": trade.get('rsi_15m', 0),
+        "rsi_1m": trade.get('rsi_1m', 0),
+        "score": trade.get('score', 0),
+        "exit_reason": reason,
+        "duration_min": duration_min,
+        "max_gain": round((trade.get('highest', entry) - entry) / entry * 100, 2),
+        "max_loss": round((trade.get('lowest', entry) - entry) / entry * 100, 2),
+        "time": str(datetime.now()),
+        "version": "v4"
+    }
+    memory.setdefault('trades', []).append(record)
+    save_json(MEMORY_FILE, memory)
+    
+    # remove من open_trades
+    open_trades = [t for t in open_trades if t.get('symbol') != trade['symbol']]
+    save_json(OPEN_TRADES_FILE, open_trades)
+    
+    # update performance
+    perf = load_json(PERFORMANCE_FILE, {
+        "today_pnl": 0, "today_trades": 0, "today_wins": 0,
+        "daily_loss": 0, "date": str(datetime.now().date())
+    })
+    perf["today_pnl"] = round(perf.get("today_pnl", 0) + net_profit, 4)
+    perf["today_trades"] = perf.get("today_trades", 0) + 1
+    if won:
+        perf["today_wins"] = perf.get("today_wins", 0) + 1
+    else:
+        perf["daily_loss"] = round(perf.get("daily_loss", 0) + abs(net_profit), 4)
+    save_json(PERFORMANCE_FILE, perf)
+    
+    # Telegram message (قناة العربية)
+    t_today = perf.get('today_trades', 0)
+    w_today = perf.get('today_wins', 0)
+    wr_today = (w_today / t_today * 100) if t_today else 0
+    
+    status_emoji = "✅ ربح!" if won else "❌ خسارة"
+    
+    msg = (
+        f"{status_emoji}\n"
+        f"🪙 <b>{trade['symbol']}</b>\n"
+        f"💵 Entry: ${entry:.6f} → Exit: ${exit_price:.6f}\n"
+        f"📈 {pnl_pct*100:+.2f}% | ${net_profit:+.4f} net\n"
+        f"⏱️ {duration_min} دقائق | {reason}\n"
+        f"\n"
+        f"📊 اليوم: {t_today} صفقات | WR: {wr_today:.0f}% | P&L: ${perf.get('today_pnl', 0):+.2f}"
+    )
+    send_tg(msg, TELEGRAM_CHANNEL_AR)
+
+
+def monitor_trade(exchange, trade, open_trades):
+    """راقب صفقة مفتوحة"""
+    symbol = trade['symbol']
+    try:
+        ticker = exchange.fetch_ticker(symbol)
+        current_price = float(ticker['last'])
+        entry = float(trade['entry_price'])
+        gain_pct = (current_price - entry) / entry
+        
+        # update highest/lowest
+        if current_price > trade.get('highest', entry):
+            trade['highest'] = current_price
+        if current_price < trade.get('lowest', entry):
+            trade['lowest'] = current_price
+        
+        # مدة
+        try:
+            open_time = datetime.fromisoformat(str(trade['open_time']).replace(' ', 'T').split('.')[0])
+            duration_min = (datetime.now() - open_time).total_seconds() / 60
+        except:
+            duration_min = 0
+        
+        reason = None
+        
+        # 1. SL hit
+        if current_price <= trade['stop_loss']:
+            reason = f"🛑 SL {gain_pct*100:.2f}%"
+        
+        # 2. TP hit
+        elif current_price >= trade['take_profit']:
+            reason = f"🎯 TP +{gain_pct*100:.2f}%"
+        
+        # 3. Trailing stop
+        elif gain_pct >= TRAIL_AT_08:
+            new_sl = round(trade['highest'] * (1 - TRAIL_DISTANCE_3), 10)
+            if new_sl > trade['stop_loss']:
+                trade['stop_loss'] = new_sl
+                if not trade.get('trailing_activated'):
+                    trade['trailing_activated'] = True
+                    log.info(f"Trailing activated {symbol} @ +{gain_pct*100:.2f}%")
+        elif gain_pct >= TRAIL_AT_05:
+            new_sl = round(trade['highest'] * (1 - TRAIL_DISTANCE_2), 10)
+            if new_sl > trade['stop_loss']:
+                trade['stop_loss'] = new_sl
+        elif gain_pct >= TRAIL_AT_03:
+            new_sl = round(trade['highest'] * (1 - TRAIL_DISTANCE_1), 10)
+            if new_sl > trade['stop_loss']:
+                trade['stop_loss'] = new_sl
+        
+        # 4. Timeout
+        if not reason and duration_min >= MAX_TRADE_MINS:
+            if gain_pct > 0.001:
+                reason = f"⏰ Timeout +{gain_pct*100:.2f}%"
+            else:
+                reason = f"⏰ Timeout {gain_pct*100:.2f}%"
+        
+        # 5. Soft timeout - لو ماتحركش
+        if not reason and duration_min >= SOFT_TIMEOUT and abs(gain_pct) < 0.0015:
+            reason = f"😴 No move {duration_min:.0f}m"
+        
+        # نفذ الإغلاق
+        if reason:
+            close_trade(trade, current_price, reason, open_trades)
+        else:
+            save_json(OPEN_TRADES_FILE, open_trades)
+            
+    except Exception as e:
+        log.error(f"Monitor error {symbol}: {e}")
+
+
+def send_hourly_report():
+    """تقرير مفصل كل ساعة - قناة التقارير"""
+    try:
+        perf = load_json(PERFORMANCE_FILE, {})
+        mem = load_json(MEMORY_FILE, {'trades': []})
+        
+        t_today = perf.get('today_trades', 0)
+        w_today = perf.get('today_wins', 0)
+        l_today = t_today - w_today
+        pnl_today = perf.get('today_pnl', 0)
+        wr = (w_today / t_today * 100) if t_today else 0
+        
+        # آخر 5 صفقات v4
+        recent_v4 = [t for t in mem.get('trades', []) if t.get('version') == 'v4'][-5:]
+        recent_lines = []
+        for t in recent_v4:
+            emoji = "✅" if t.get('won') else "❌"
+            sym = t.get('symbol', '?')
+            profit = t.get('profit', 0)
+            dur = t.get('duration_min', 0)
+            recent_lines.append(f"   {emoji} {sym} ${profit:+.2f} | {dur}m")
+        
+        msg_parts = [
+            "🐺 <b>تقرير الذئاب - كل ساعة</b>",
+            f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC",
+            "",
+            "📊 <b>اليوم:</b>",
+            f"   صفقات: <b>{t_today}</b>",
+            f"   ✅ رابحة: <b>{w_today}</b>",
+            f"   ❌ خاسرة: <b>{l_today}</b>",
+            f"   📈 WR: <b>{wr:.0f}%</b>",
+            f"   💰 P&L: <b>${pnl_today:+.2f}</b>",
+        ]
+        
+        if recent_lines:
+            msg_parts.append("")
+            msg_parts.append("🕐 <b>آخر 5 صفقات:</b>")
+            msg_parts.extend(recent_lines)
+        
+        # إحصائيات v4 كاملة
+        all_v4 = [t for t in mem.get('trades', []) if t.get('version') == 'v4']
+        if len(all_v4) >= 5:
+            wins_v4 = [t for t in all_v4 if t.get('won')]
+            total_pnl_v4 = sum(t.get('profit', 0) for t in all_v4)
+            wr_v4 = len(wins_v4) / len(all_v4) * 100
+            
+            msg_parts.append("")
+            msg_parts.append("📊 <b>إحصائيات v4 الكاملة:</b>")
+            msg_parts.append(f"   Total trades: {len(all_v4)}")
+            msg_parts.append(f"   WR: {wr_v4:.1f}%")
+            msg_parts.append(f"   P&L: ${total_pnl_v4:+.2f}")
+        
+        send_tg("\n".join(msg_parts), REPORT_CHANNEL)
+        log.info("Hourly report sent")
+    except Exception as e:
+        log.error(f"Report error: {e}")
+
+
+def run():
+    log.info("="*60)
+    log.info("Guardian v4 started")
+    log.info(f"TP: {TP_PCT*100}% | SL: {SL_PCT*100}%")
+    log.info(f"Trailing: {TRAIL_AT_03*100}%/{TRAIL_AT_05*100}%/{TRAIL_AT_08*100}%")
+    log.info(f"Timeouts: MAX={MAX_TRADE_MINS}m SOFT={SOFT_TIMEOUT}m")
+    log.info("="*60)
+    
+    exchange = connect()
+    cycle = 0
+    last_hourly_report = time.time()
+    last_summary_log = 0
+    
+    while True:
+        try:
+            cycle += 1
+            now = time.time()
+            
+            # 1. نفذ signals الجديدة
+            process_pending_signal(exchange)
+            
+            # 2. راقب الصفقات المفتوحة
+            open_trades = load_json(OPEN_TRADES_FILE, [])
+            for trade in open_trades[:]:  # copy للـiteration
+                if trade in open_trades:
+                    monitor_trade(exchange, trade, open_trades)
+            
+            # 3. تقرير كل ساعة
+            if now - last_hourly_report > 3600:
+                send_hourly_report()
+                last_hourly_report = now
+            
+            # 4. Log summary كل دقيقة
+            if now - last_summary_log > 60:
+                open_trades = load_json(OPEN_TRADES_FILE, [])
+                perf = load_json(PERFORMANCE_FILE, {})
+                log.info(
+                    f"Cycle #{cycle} | Open: {len(open_trades)} | "
+                    f"Today: {perf.get('today_trades', 0)}t "
+                    f"WR:{(perf.get('today_wins', 0)/max(perf.get('today_trades', 0), 1)*100):.0f}% "
+                    f"${perf.get('today_pnl', 0):+.2f}"
+                )
+                last_summary_log = now
+            
+            time.sleep(GUARDIAN_SLEEP)
+            
+        except KeyboardInterrupt:
+            log.info("Stopped by user")
+            break
+        except Exception as e:
+            log.error(f"Cycle error: {e}")
+            time.sleep(5)
+
+
+if __name__ == "__main__":
+    run()

@@ -82,24 +82,57 @@ def calc_rsi(series, period=14):
     return round(float(rsi.iloc[-1]), 1)
 
 
-def check_cooldown(symbol):
-    """cooldown 10 دقائق بعد آخر صفقة خاسرة"""
+def check_cooldown(exchange, symbol):
+    """
+    حظر ذكي (Dynamic Cooldown) لمدة 60 دقيقة بعد أي صفقة،
+    إلا إذا استيقظت العملة وانفجرت (Volume 3x + كسر القمة).
+    """
     try:
         mem = load_json(MEMORY_FILE, {'trades': []})
-        recent_losses = [
-            t for t in mem.get('trades', [])[-30:]
-            if t.get('symbol') == symbol and not t.get('won')
+        recent_trades = [
+            t for t in mem.get('trades', [])[-50:]
+            if t.get('symbol') == symbol
         ]
-        if recent_losses:
-            last_loss_time = recent_losses[-1].get('time', '2020-01-01')
-            try:
-                lt = datetime.fromisoformat(str(last_loss_time).replace(' ', 'T').split('.')[0])
-                if (datetime.now() - lt).total_seconds() < 600:
-                    return True
-            except:
-                pass
-    except:
-        pass
+        
+        if not recent_trades:
+            return False # لا يوجد حظر
+            
+        last_trade = recent_trades[-1]
+        last_time_str = str(last_trade.get('time', '2020-01-01'))
+        try:
+            lt = datetime.fromisoformat(last_time_str.replace(' ', 'T').split('.')[0])
+            minutes_since = (datetime.now() - lt).total_seconds() / 60
+            
+            if minutes_since >= 60:
+                return False # انتهى الحظر
+                
+            # نحن في فترة الحظر. هل استيقظت العملة؟
+            candles = exchange.fetch_ohlcv(symbol, '1m', limit=30)
+            if len(candles) < 30:
+                return True
+                
+            df = pd.DataFrame(candles, columns=['t', 'o', 'h', 'l', 'c', 'v'])
+            current_price = float(df.iloc[-1]['c'])
+            current_vol = float(df.iloc[-1]['v'])
+            
+            avg_vol = float(df['v'].iloc[:-1].mean())
+            vol_breakout = current_vol > (avg_vol * 3)
+            
+            highest_30m = float(df['h'].iloc[:-1].max())
+            price_breakout = current_price > highest_30m
+            
+            if vol_breakout and price_breakout:
+                log.info(f"🧨 {symbol} كسرت الحظر! استيقظت من الغيبوبة")
+                return False # كسر الحظر
+                
+            return True # ما زالت ميتة، الحظر مستمر
+            
+        except Exception as e:
+            pass
+            
+    except Exception as e:
+        log.error(f"Cooldown error: {e}")
+        
     return False
 
 def check_trap_memory(candidate, rsi_1m):
@@ -350,7 +383,7 @@ def run():
                     continue
                 
                 # skip cooldown
-                if check_cooldown(symbol):
+                if check_cooldown(exchange, symbol):
                     log.debug(f"Cooldown: {symbol}")
                     continue
                 

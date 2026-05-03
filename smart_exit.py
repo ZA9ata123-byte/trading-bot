@@ -179,24 +179,24 @@ def smart_check(trade, current_price, current_rsi):
         return f"📊 RSI={current_rsi} OB! +{gain*100:.2f}%", True
 
     if gain > 0:
-        if gain >= 0.003:
+        if gain >= 0.005:
             be_price = round(entry * (1 + FEE + 0.0005), 8)
             if trade.get("stop_loss", 0) < be_price:
                 trade["stop_loss"] = be_price
-        if gain >= 0.004:
-            new_sl = round(current_price * (1 - 0.0015), 8)
+        if gain >= 0.006:
+            new_sl = round(current_price * (1 - 0.0020), 8)
             if new_sl > trade.get("stop_loss", 0):
                 trade["stop_loss"] = new_sl
     if trade.get("stop_loss", 0) > entry and current_price <= trade["stop_loss"]:
         tg = (trade["stop_loss"] - entry) / entry
         return f"🔒 Trail +{tg*100:.2f}%", True
 
-    if mins >= 3:
+    if mins >= 15:
         if gain > FEE:
             return f"⏰ {mins:.0f}m +{gain*100:.2f}%", True
-        elif gain > 0 and mins >= 4:
+        elif gain > 0 and mins >= 18:
             return f"⏰ {mins:.0f}m BE {gain*100:.2f}%", True
-        elif gain <= 0 and mins >= 4:
+        elif gain <= 0 and mins >= 18:
             return f"⏰ MAX {mins:.0f}m {gain*100:.2f}%", True
 
     return None, False
